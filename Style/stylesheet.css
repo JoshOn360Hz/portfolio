@@ -307,7 +307,14 @@ body {
   transition: all 0.3s ease;
   color: white;
 }
+#contactButton .btn.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.2)!important;
 
+}
+.contact-btn:hover{
+  background: rgba(255, 255, 255, 0.2)!important;
+  transform: translateY(-2px)!important;
+}
 
 #contactCard .btn.btn-secondary {
   background: rgba(255, 255, 255, 0.1) !important;
@@ -388,7 +395,7 @@ body {
 
 @media (min-width: 980px) {
   .projects-grid {
-    max-width: 1200px;
+    max-width: 1190px;
 
   }
   }
@@ -397,63 +404,26 @@ body {
     body {
       background-color: #f0f0f0;
       background-image: url("../img/bg_light.png");
-      color: #111;
+      color: #fff;
     }
-  
-    .skills-section h2,
-    .projects-section h2,
-    .navbar-brand {
-      color: #111;
-    }
-    .projects-grid .btn.btn-secondary{
-      color: #111 !important;
-      background: rgba(0, 0, 0, 0.05) !important;; 
-      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    
+.projects-grid::-webkit-scrollbar {
+  height: 6px;
+}
 
-    }
-    .projects-grid .btn.btn-secondary:hover{
-      background: rgba(0, 0, 0, 0.1)!important;
-      color: #111 !important;
+.projects-grid::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
 
-    }
-  
-    .skills-pills .badge,
-    .github-circle,
-    .navbar,
-    .nav-button,
-    .hero-card,
-    .about-card,
-    .project-card,
-    .contact-btn,
-    #contactCard,
-    .projects-grid .btn {
-      background: rgba(0, 0, 0, 0.05);
-      color: #111;
-      border: 1px solid rgba(0, 0, 0, 0.1);
-    }
-  
-    .skills-pills .badge:hover,
-    .github-circle:hover,
-    .nav-button:hover,
-    .contact-btn:hover,
-    .btn:hover,
-    .btn.btn-secondary,
-    .projects-grid .btn:hover {
-      background: rgba(0, 0, 0, 0.1);
-      color: #111;
-    }
-  
-    .about-text p {
-      color: #333;
-    }
-  
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    #menu-icon {
-      transition: all 0.3s ease;
-      color: black;
-    }
+.projects-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.projects-grid {
+  scrollbar-width: thin;
+  scrollbar-color: #fff transparent;
+}
   }
   
   
