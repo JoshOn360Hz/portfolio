@@ -16,9 +16,10 @@
       <a class="navbar-brand" href="#">Josh Mansfield</a>
   
       <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <i id="menu-icon" class="fas fa-bars"></i>
+    </button>
+    
   
       <div class="collapse navbar-collapse" id="navbarNav">
         <div class="navbar-nav ms-auto d-flex gap-3">
@@ -134,7 +135,7 @@
     <br>
   
 <div class="contact">
-    <button id="contactButton" class="btn btn-primary rounded-pill contact-btn">
+    <button id="contactButton" class="btn btn-secondary rounded-pill contact-btn">
       Contact Me
     </button>
     <div id="contactCard" class="card shadow-lg" style="position: fixed; bottom: 90px; right: 20px; width: 300px;"style="border-radius:20px;">
@@ -177,4 +178,23 @@
     });
   </script>
   
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.querySelector('.navbar-toggler');
+      const menuIcon = document.getElementById('menu-icon');
+    
+      toggler.addEventListener('click', function () {
+        setTimeout(() => {
+          if (toggler.classList.contains('collapsed')) {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+          } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+          }
+        }, 300);
+      });
+    });
+    </script>
+    
   
