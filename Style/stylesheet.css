@@ -313,6 +313,9 @@
       background-color: #d0d0d0;
       color: #111;
     }
+    .navbar-toggler-icon{
+        color:black;
+    }
   
     .nav-button:hover {
       background-color: #c0c0c0;
