@@ -406,6 +406,9 @@ body {
       background-image: url("../img/bg_light.png");
       color: #fff;
     }
+    .navbar-brand:hover{
+      color: white !important;
+    }
     
 .projects-grid::-webkit-scrollbar {
   height: 6px;
