@@ -210,88 +210,73 @@
 </html>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    document.body.classList.add('js-enabled');
-  });
-  </script>
-  
-<script>
     const customCursor = document.getElementById('custom-cursor');
-    let hideCursorTimeout;
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
   
-    document.addEventListener('mousemove', function (e) {
-      customCursor.style.left = e.clientX + 'px';
-      customCursor.style.top = e.clientY + 'px';
+    if (!isTouchDevice && customCursor) {
+      document.body.classList.add('js-enabled');
+      customCursor.style.display = 'block';
   
-      customCursor.style.opacity = '1';
-      clearTimeout(hideCursorTimeout);
+      let hideCursorTimeout;
   
-      hideCursorTimeout = setTimeout(() => {
+      document.addEventListener('mousemove', function (e) {
+        customCursor.style.left = e.clientX + 'px';
+        customCursor.style.top = e.clientY + 'px';
+        customCursor.style.opacity = '1';
+        clearTimeout(hideCursorTimeout);
+        hideCursorTimeout = setTimeout(() => {
+          customCursor.style.opacity = '0';
+        }, 5000);
+      });
+  
+      document.addEventListener('mousedown', function () {
         customCursor.style.opacity = '0';
-      }, 5000);
-    });
-  
-    document.addEventListener('mousedown', function () {
-      customCursor.style.opacity = '0';
-    });
-  
-    document.addEventListener('mouseup', function () {
-      customCursor.style.opacity = '1';
-    });
-  
-    window.addEventListener('mouseleave', function () {
-      customCursor.style.opacity = '0';
-    });
-  
-    window.addEventListener('mouseenter', function () {
-      customCursor.style.opacity = '1';
-    });
-  
-    const interactiveElements = document.querySelectorAll('a, button, .btn, input, textarea');
-    
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', () => {
-        customCursor.classList.add('hover');
       });
-      el.addEventListener('mouseleave', () => {
-        customCursor.classList.remove('hover');
-      });
-    });
   
+      document.addEventListener('mouseup', function () {
+        customCursor.style.opacity = '1';
+      });
+  
+      window.addEventListener('mouseleave', function () {
+        customCursor.style.opacity = '0';
+      });
+  
+      window.addEventListener('mouseenter', function () {
+        customCursor.style.opacity = '1';
+      });
+  
+      const interactiveElements = document.querySelectorAll('a, button, .btn, input, textarea');
+      interactiveElements.forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+          customCursor.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+          customCursor.classList.remove('hover');
+        });
+      });
+    } else {
+      if (customCursor) {
+        customCursor.style.display = 'none';
+      }
+    }
+  
+    // Navbar toggler icon swap
     const toggler = document.querySelector('.navbar-toggler');
     const menuIcon = document.getElementById('menu-icon');
   
-    toggler.addEventListener('click', function () {
-      setTimeout(() => {
-        if (toggler.classList.contains('collapsed')) {
-          menuIcon.classList.remove('fa-times');
-          menuIcon.classList.add('fa-bars');
-        } else {
-          menuIcon.classList.remove('fa-bars');
-          menuIcon.classList.add('fa-times');
-        }
-      }, 300);
-    });
-
-  </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-        document.body.classList.add('js-enabled');
-        const customCursor = document.getElementById('custom-cursor');
-        if (customCursor) {
-          customCursor.style.display = 'block';
-        }
-      });
-      </script>
-      <script>
-        // Detect if the device has touch input
-        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
-          const customCursor = document.getElementById('custom-cursor');
-          if (customCursor) {
-            customCursor.style.display = 'none';
+    if (toggler && menuIcon) {
+      toggler.addEventListener('click', function () {
+        setTimeout(() => {
+          if (toggler.classList.contains('collapsed')) {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+          } else {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
           }
-        }
-      </script>
-      
-      
-  
+        }, 300);
+      });
+    }
+  });
+  </script>
   
