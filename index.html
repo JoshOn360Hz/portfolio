@@ -167,86 +167,121 @@
       </a>
     </div>
 <div class="contact">
-    <button id="contactButton" class="btn btn-secondary rounded-pill contact-btn">
-      Contact Me
-    </button>
-    <div id="contactCard" class="card shadow-lg" style="position: fixed; bottom: 90px; right: 20px; width: 300px;"style="border-radius:20px;">
-      <div class="card-header text-white d-flex justify-content-between align-items-center bg-dark" style="border-radius:20px;">
-        <span>Contact me</span>
-        <button type="button" class="btn-close btn-close-white" id="closeContactCard" aria-label="Close"></button>
-      </div>
-      <div class="card-body bg-dark text-white"style="border-radius:20px;">
-        <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='tel:07453331649'">
-          <i class="bi bi-telephone-fill"></i> Call Me
-        </button>
-        <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='mailto:joshimansfield@icloud.com'">
-          <i class="bi bi-envelope-fill"></i> Email Me
-        </button>
-        <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='sms:07453331649'">
-          <i class="bi bi-chat-dots-fill"></i> Text Me
-        </button>
-      </div>
+  <input type="checkbox" id="toggleContact" hidden>
+
+  <label for="toggleContact" class="btn btn-secondary rounded-pill contact-btn">
+    Contact Me
+  </label>
+
+  <div id="contactCard" class="card shadow-lg"style="border-radius: 20px;">
+    <div class="card-header text-white d-flex justify-content-between align-items-center bg-dark" style="border-radius: 20px;">
+      <span>Contact me</span>
+      <label for="toggleContact" class="btn-close btn-close-white" aria-label="Close"></label>
+    </div>
+    <div class="card-body bg-dark text-white" style="border-radius: 20px;">
+      <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='tel:07453331649'">
+        <i class="bi bi-telephone-fill"></i> Call Me
+      </button>
+      <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='mailto:joshimansfield@icloud.com'">
+        <i class="bi bi-envelope-fill"></i> Email Me
+      </button>
+      <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='sms:07453331649'">
+        <i class="bi bi-chat-dots-fill"></i> Text Me
+      </button>
     </div>
   </div>
-    <br>
-    <br>
+</div>
+
 </main>
 <div id="custom-cursor"></div>
 </body>
+<noscript>
+  <div style="
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 0.9rem;
+  ">
+    JavaScript is disabled. For the best experience, please enable it.
+  </div>
+</noscript>
 </html>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const contactButton = document.getElementById('contactButton');
-      const contactCard = document.getElementById('contactCard');
-      const closeContactCard = document.getElementById('closeContactCard');
-  
-      contactButton.addEventListener('click', function () {
-        contactCard.classList.toggle('show');
-      });
-  
-      closeContactCard.addEventListener('click', function () {
-        contactCard.classList.remove('show');
-      });
-    });
+  document.addEventListener('DOMContentLoaded', function () {
+    document.body.classList.add('js-enabled');
+  });
   </script>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const toggler = document.querySelector('.navbar-toggler');
-      const menuIcon = document.getElementById('menu-icon');
-    
-      toggler.addEventListener('click', function () {
-        setTimeout(() => {
-          if (toggler.classList.contains('collapsed')) {
-            menuIcon.classList.remove('fa-times');
-            menuIcon.classList.add('fa-bars');
-          } else {
-            menuIcon.classList.remove('fa-bars');
-            menuIcon.classList.add('fa-times');
-          }
-        }, 300);
-      });
+<script>
+    const customCursor = document.getElementById('custom-cursor');
+    let hideCursorTimeout;
+  
+    document.addEventListener('mousemove', function (e) {
+      customCursor.style.left = e.clientX + 'px';
+      customCursor.style.top = e.clientY + 'px';
+  
+      customCursor.style.opacity = '1';
+      clearTimeout(hideCursorTimeout);
+  
+      hideCursorTimeout = setTimeout(() => {
+        customCursor.style.opacity = '0';
+      }, 5000);
     });
-    </script>
-    <script>
-    const cursor = document.getElementById('custom-cursor');
-
-    document.addEventListener('mousemove', (e) => {
-      cursor.style.top = `${e.clientY}px`;
-      cursor.style.left = `${e.clientX}px`;
+  
+    document.addEventListener('mousedown', function () {
+      customCursor.style.opacity = '0';
     });
-    
-    // Detect when hovering over clickable elements
+  
+    document.addEventListener('mouseup', function () {
+      customCursor.style.opacity = '1';
+    });
+  
+    window.addEventListener('mouseleave', function () {
+      customCursor.style.opacity = '0';
+    });
+  
+    window.addEventListener('mouseenter', function () {
+      customCursor.style.opacity = '1';
+    });
+  
     const interactiveElements = document.querySelectorAll('a, button, .btn, input, textarea');
     
     interactiveElements.forEach((el) => {
       el.addEventListener('mouseenter', () => {
-        cursor.classList.add('hover');
+        customCursor.classList.add('hover');
       });
       el.addEventListener('mouseleave', () => {
-        cursor.classList.remove('hover');
+        customCursor.classList.remove('hover');
       });
     });
-    </script>
-    
+  
+    const toggler = document.querySelector('.navbar-toggler');
+    const menuIcon = document.getElementById('menu-icon');
+  
+    toggler.addEventListener('click', function () {
+      setTimeout(() => {
+        if (toggler.classList.contains('collapsed')) {
+          menuIcon.classList.remove('fa-times');
+          menuIcon.classList.add('fa-bars');
+        } else {
+          menuIcon.classList.remove('fa-bars');
+          menuIcon.classList.add('fa-times');
+        }
+      }, 300);
+    });
+
+  </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.body.classList.add('js-enabled');
+        const customCursor = document.getElementById('custom-cursor');
+        if (customCursor) {
+          customCursor.style.display = 'block';
+        }
+      });
+      </script>
+      
+  
   

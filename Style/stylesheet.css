@@ -300,9 +300,18 @@ body {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
+#toggleContact:checked ~ #contactCard {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#toggleContact {
+  display: none;
 #menu-icon {
   transition: all 0.3s ease;
   color: white;
+}
 }
 #contactButton .btn.btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2)!important;
@@ -383,21 +392,21 @@ body {
   text-decoration: none;
 }
 
-body {
-  cursor: none;
-}
-a, button {
-  cursor: none;
+.js-enabled * {
+  cursor: none !important;
 }
 
 
 #custom-cursor {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 20px;
   height: 20px;
   background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-radius: 50%;
   border: rgba(255, 255, 255, 0.5) 1px solid;
   pointer-events: none;
@@ -412,6 +421,8 @@ a, button {
   width: 30px;
   height: 30px;
   background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 @media (prefers-color-scheme: dark) {
