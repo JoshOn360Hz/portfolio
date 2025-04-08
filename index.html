@@ -282,6 +282,16 @@
         }
       });
       </script>
+      <script>
+        // Detect if the device has touch input
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+          const customCursor = document.getElementById('custom-cursor');
+          if (customCursor) {
+            customCursor.style.display = 'none';
+          }
+        }
+      </script>
+      
       
   
   
