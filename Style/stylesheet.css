@@ -383,6 +383,56 @@ body {
   text-decoration: none;
 }
 
+body {
+  cursor: none;
+}
+a, button {
+  cursor: none;
+}
+
+
+#custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: rgba(255, 255, 255, 0.5) 1px solid;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease, background-color 0.3s ease, transform 0.1s ease;
+  z-index: 9999;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#custom-cursor.hover {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+@media (prefers-color-scheme: dark) {
+  #custom-cursor {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  #custom-cursor.hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #custom-cursor {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  #custom-cursor.hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+
 
 @media (max-width: 991px) {
   .navbar-nav {

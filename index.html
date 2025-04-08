@@ -191,7 +191,7 @@
     <br>
     <br>
 </main>
-
+<div id="custom-cursor"></div>
 </body>
 </html>
 <script>
@@ -225,6 +225,26 @@
             menuIcon.classList.add('fa-times');
           }
         }, 300);
+      });
+    });
+    </script>
+    <script>
+    const cursor = document.getElementById('custom-cursor');
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
+    });
+    
+    // Detect when hovering over clickable elements
+    const interactiveElements = document.querySelectorAll('a, button, .btn, input, textarea');
+    
+    interactiveElements.forEach((el) => {
+      el.addEventListener('mouseenter', () => {
+        cursor.classList.add('hover');
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.classList.remove('hover');
       });
     });
     </script>
