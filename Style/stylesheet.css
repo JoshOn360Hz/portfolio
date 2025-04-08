@@ -53,9 +53,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
   color: white;
@@ -105,9 +103,7 @@ body {
 }
 
 .nav-button {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+
   color: white;
   padding: 6px 16px;
   border-radius: 999px;
@@ -345,9 +341,6 @@ body {
   z-index: 1050;
 }
 .projects-grid .btn {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
   padding: 10px 20px;
@@ -361,32 +354,28 @@ body {
   transition: background 0.3s, transform 0.3s;
 }
 
-.projects-grid .btn:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
-}
 
-.projects-grid .btn.btn-secondary {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
-}
 .project-link-btn {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.6);
   color: white;
   padding: 10px 20px;
   font-size: 1rem;
-  border-radius: 999px; 
+  border-radius: 999px;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background 0.3s, transform 0.3s;
+  transition: background 0.3s, transform 0.3s, border-color 0.3s;
 }
+
+.project-link-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
 
 .project-link-btn:hover {
   background: rgba(255, 255, 255, 0.2);
