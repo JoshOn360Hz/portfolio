@@ -371,6 +371,28 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2) !important;
   color: white !important;
 }
+.project-link-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 999px; 
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.project-link-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
 
 
 @media (max-width: 991px) {
