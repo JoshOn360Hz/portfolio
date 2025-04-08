@@ -308,11 +308,12 @@ body {
 
 #toggleContact {
   display: none;
+}
 #menu-icon {
   transition: all 0.3s ease;
   color: white;
 }
-}
+
 #contactButton .btn.btn-secondary:hover {
   background: rgba(255, 255, 255, 0.2)!important;
 
