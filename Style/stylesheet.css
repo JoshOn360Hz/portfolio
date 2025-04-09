@@ -209,6 +209,11 @@ body::after {
   margin-bottom: 30px;
   color: white;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+
 
 .projects-grid {
   display: flex;
@@ -220,6 +225,7 @@ body::after {
   max-width: 920px;
   margin: 0 auto;
 }
+
 
 .projects-grid::-webkit-scrollbar {
   height: 6px;
