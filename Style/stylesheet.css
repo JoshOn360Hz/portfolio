@@ -87,6 +87,23 @@ body::after {
   border-radius: 999px;
   color: white;
 }
+.project-tech-stack {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+.project-tech-stack img {
+  width: 20px; 
+  height: 20px;
+  margin: 0 4px; 
+  opacity: 0.7; 
+  transition: opacity 0.3s;
+}
+
+.project-tech-stack img:hover {
+  opacity: 1; 
+}
+
 
 .github-circle:hover {
   background: rgba(255, 255, 255, 0.2);
