@@ -116,8 +116,8 @@ body::after {
   padding: 10px 20px;
   border-radius: 50px;
   margin: 20px auto;
-  width: 90%;
-  max-width: 1200px;
+  width: 10%;
+  max-width: 100px;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
