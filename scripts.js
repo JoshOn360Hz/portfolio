@@ -290,9 +290,24 @@ function setupModal() {
 
   document.querySelectorAll('.app-card[data-app]').forEach(card => {
     const button = card.querySelector('.app-button');
+    const appKey = card.getAttribute('data-app');
+    
+    // Make the entire card clickable
+    card.addEventListener('click', (e) => {
+      // Prevent event bubbling if clicking on interactive elements
+      if (e.target.tagName === 'A' || e.target.closest('a')) {
+        return;
+      }
+      openModal(appKey);
+    });
+    
+    // Add hover effect to indicate the card is clickable
+    card.style.cursor = 'pointer';
+    
+    // Keep the button click handler as well (redundant but harmless)
     if (button) {
-      button.addEventListener('click', () => {
-        const appKey = card.getAttribute('data-app');
+      button.addEventListener('click', (e) => {
+        e.stopPropagation(); // Prevent double-triggering
         openModal(appKey);
       });
     }

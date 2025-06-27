@@ -183,10 +183,30 @@ body {
     left: var(--x);
     top: var(--y);
     opacity: 0.6;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-weight: 900;
 }
 
 .floating-card i {
     transition: all 0.3s ease;
+    font-family: inherit;
+    font-weight: inherit;
+    font-style: normal;
+    display: inline-block;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Fallback for when Font Awesome doesn't load */
+.floating-card i:before {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
+}
+
+/* Additional Linux font rendering fixes */
+@supports not (backdrop-filter: blur(10px)) {
+    .floating-card {
+        background: rgba(255, 255, 255, 0.5);
+    }
 }
 
 @keyframes float {
