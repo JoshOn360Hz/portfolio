@@ -2,403 +2,441 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Josh Mansfield - Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="Style/stylesheet.css">  
-  <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
-  <link rel="shortcut icon" href="/img/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Josh M " />
-  <link rel="manifest" href="/img/site.webmanifest" />
-  <link rel="preload" as="image" href="img/bg_dark.jpg">
-  <link rel="preload" as="image" href="img/bg_light.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Josh Mansfield - Portfolio</title>
+<meta name="description" content="Josh Mansfield - iOS Developer, Frontend Enthusiast & Tech Support Specialist. Creating beautiful apps and experiences.">
+<link rel="icon" type="image/png" href="/assets/favico/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/assets/favico/favicon.svg" />
+<link rel="shortcut icon" href="/assets/favico/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favico/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="JoshMansfield" />
+<link rel="manifest" href="/assets/favico/site.webmanifest" />
+<link rel="preload" as="image" href="img/project-logos/cumulus.png">
+<link rel="preload" as="image" href="img/project-logos/pinboard.png">
+<link rel="preload" as="image" href="img/project-logos/TailTag.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<meta property="og:title" content="Josh Mansfield - Developer & Creator">
+<meta property="og:description" content="iOS Developer, Frontend Enthusiast & Tech Support Specialist creating amazing user experiences.">
+<meta property="og:url" content="https://joshmansfieldportfolio.com">
+<meta property="og:type" content="website">
 
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg">
-
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Josh Mansfield</a>
-  
-      <button class="navbar-toggler custom-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <i id="menu-icon" class="fas fa-bars"></i>
-    </button>
-    
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <div class="navbar-nav ms-auto d-flex gap-3">
-          <a href="#projects" class="nav-button">Projects</a>
-          <a href="#skills" class="nav-button">What I can do</a>
-          <a href="assets\Josh_Mansfield_CV.docx" class="nav-button" download>Download Resume</a>
-          <a href="https://github.com/JoshOn360Hz" target="_blank" class="nav-button github-circle"><i class="bi bi-github"></i></a> 
-        </div>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h1>Josh Mansfield</h1>
       </div>
+      
+      <div class="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#apps" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="assets/Josh_Mansfield_CV.docx" class="nav-link" download>Resume</a>
+        <a href="https://github.com/JoshOn360Hz" target="_blank" class="nav-button github-circle"><i class="fa-brands fa-github"></i></a>
       </div>
-
+      
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
   </nav>
 
-  <main>
-
-  <section id="home"></section>
-
-<br>
-  <div class="about-card">
-    <img src="img/josh.png" alt="Josh Mansfield" class="profile-picture">
-    <h1>Josh Mansfield</h1>
-    <h3 style="font-size:medium;">Developer | Frontend Enthusiast | Tech Support Specialist</h2>
-        <br>
-
-    <div class="about-text">
-      <p>
-        My passion for technology started when I was six. I was given an iPhone 3G with no SIM card. Through online resources, I learned how to bypass activation. From there, my interest expanded to technical support and development. I have been developing websites, apps and Unreal Engine experiences for creators, who then brand and publish them. 
-        I also run a technical support business called <strong>TechByJosh</strong>, specialising in repairing devices and installing networking equipment.
+  <section id="home" class="hero">
+    <div class="hero-content" style="padding-top: 50px;">
+      <h1 class="hero-title">
+        <span class="line">Developer.</span>
+        <span class="line">Designer.</span>
+        <span class="line">Frontend Enthusiast.</span>
+      </h1>
+      <p class="hero-subtitle">
+       My passion for technology started when I was six. I was given an iPhone 3G with no SIM card. Through online resources, I learned how to bypass activation. From there, my interest expanded to development. I have been developing websites, apps and Unreal Engine experiences for creators.
       </p>
+      <button class="cta-button">
+        Explore My Work
+      </button>
+    </div>
+  </section>
 
+  <section id="apps" class="apps-section">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <p>Explore my portfolio of iOS applications, web development projects, and innovative solutions.</p>
     </div>
 
-  </div>
+    <div class="apps-grid">
 
-  <br>
-
-  <section id="projects" class="projects-section">
-
-    <h2>Projects</h2>
-
-    <div class="projects-grid">
-            <div class="project-card">
-        <img src="img\abj.png" alt="Website Logo" class="project-logo rounded-logo" style="width: 40%;">
-        <h3>Apps By Josh</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/HTML.png" alt="HTML">
-          <img src="assets/skills/CSS.png" alt="CSS">
-          <img src="assets/skills/JS.png" alt="JS">
+      <div class="app-card" data-app="cumulus">
+        <div class="app-icon">
+          <img src="img/project-logos/cumulus.png" alt="Cumulus Weather App" class="app-icon-img">
         </div>
-
-     <p>A portfolio showcasing my released apps for iOS, iPadOS, and macOS, designed to deliver amazing user experiences.</p>
-
-        <a href="https://appsbyjosh.com/" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-browser-safari"></i>View Website
-        </a>
-        
-      </div>
-      
-      <div class="project-card">
-        <img src="img/cumulus.png" alt="Cumulus Logo" class="project-logo rounded-logo" style="width: 40%;">
         <h3>Cumulus</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/SWIFT.png" alt="Swift">
-          <img src="assets/skills/SWIFTUI.png" alt="SwiftUI">
+        <p>A simple, Vision OS inspired weather app available on iOS, iPadOS and macOS. Beautiful design meets functionality.</p>
+        <div class="app-features">
+          <span class="feature-tag">Swift</span>
+          <span class="feature-tag">SwiftUI</span>
+          <span class="feature-tag">iOS</span>
         </div>
-
-        <p>Cumulus is a simple, Vision OS inspired weather app available on iOS, iPadOS and macOS.</p>
-        <a href="https://apps.apple.com/us/app/cumulus/id6742735497" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fab fa-apple"></i>View on App Store
-        </a>
-        <a href="https://github.com/JoshOn360Hz/CumulusApp" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
-        
+        <button class="app-button">Learn More</button>
       </div>
 
-      <div class="project-card">
-        <img src="img/pinboard.png" alt="PinBoard Logo" class="project-logo rounded-logo" style="width: 40%;">
+      <div class="app-card" data-app="pinboard">
+        <div class="app-icon">
+          <img src="img/project-logos/pinboard.png" alt="PinBoard Notes App" class="app-icon-img">
+        </div>
         <h3>PinBoard</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/SWIFT.png" alt="Swift">
-          <img src="assets/skills/SWIFTUI.png" alt="SwiftUI">
+        <p>A notes and reminders app that uses live activities, available on iOS and iPadOS. Stay organized with style.</p>
+        <div class="app-features">
+          <span class="feature-tag">Swift</span>
+          <span class="feature-tag">SwiftUI</span>
+          <span class="feature-tag">Live Activities</span>
         </div>
-
-        <p>PinBoard is a  notes / reminders app that uses live activities, available on iOS and iPadOS.</p>
-        <a href="https://apps.apple.com/us/app/pinboard-better-notes/id6747376814" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fab fa-apple"></i>View on App Store
-        </a>
-        <a href="https://github.com/JoshOn360Hz/PinBoard-App" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
+        <button class="app-button">Learn More</button>
       </div>
 
-       <div class="project-card">
-        <img src="img/TailTag.png" alt="TailTag Logo" class="project-logo rounded-logo" style="width: 40%;">
+      <div class="app-card" data-app="tailtag">
+        <div class="app-icon">
+          <img src="img/project-logos/TailTag.png" alt="TailTag Planespotter App" class="app-icon-img">
+        </div>
         <h3>TailTag</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/SWIFT.png" alt="Swift">
-          <img src="assets/skills/SWIFTUI.png" alt="SwiftUI">
+        <p>A planespotter app that helps you track aircraft you have seen. Perfect for aviation enthusiasts.</p>
+        <div class="app-features">
+          <span class="feature-tag">Swift</span>
+          <span class="feature-tag">SwiftUI</span>
+          <span class="feature-tag">Aviation</span>
         </div>
-
-        <p>TailTag is a planespotter app that helps you track of aircraft you have seen.</p>
-        <a href="https://apps.apple.com/us/app/tailtag/id6747738157" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fab fa-apple"></i>View on App Store
-        </a>
-        <a href="https://github.com/JoshOn360Hz/TailTagApp" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
+        <button class="app-button">Learn More</button>
       </div>
 
-      <div class="project-card">
-        <img src="img\HT.png" alt="Horizon Travels Logo" class="project-logo rounded-logo" style="width: 40%;">
+      <div class="app-card" data-app="appsbyjosh">
+        <div class="app-icon">
+          <img src="img/project-logos/abj.png" alt="Apps By Josh Website" class="app-icon-img">
+        </div>
+        <h3>Apps By Josh</h3>
+        <p>A portfolio showcasing my released apps for iOS, iPadOS, and macOS, designed to deliver amazing user experiences.</p>
+        <div class="app-features">
+          <span class="feature-tag">HTML</span>
+          <span class="feature-tag">CSS</span>
+          <span class="feature-tag">JavaScript</span>
+        </div>
+        <button class="app-button">Learn More</button>
+      </div>
+
+      <div class="app-card" data-app="horizontravel">
+        <div class="app-icon">
+          <img src="img/project-logos/HT.png" alt="Horizon Travels" class="app-icon-img">
+        </div>
         <h3>Horizon Travels</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/PYTHON.png" alt="Python">
-          <img src="assets/skills/HTML.png" alt="HTML">
-          <img src="assets/skills/CSS.png" alt="CSS">
-          <img src="assets/skills/JS.png" alt="JS">
-          <img src="assets/skills/SQL.png" alt="SQL">
+        <p>A web-based flight booking system built with Python (Flask), CSS, JavaScript, HTML and SQL.</p>
+        <div class="app-features">
+          <span class="feature-tag">Python</span>
+          <span class="feature-tag">Flask</span>
+          <span class="feature-tag">SQL</span>
         </div>
-
-        <p>Horizon Travels is a web-based flight booking system built with Python (Flask), CSS, JavaScript, HTML and SQL.</p>
-        <br>
-        <a href="https://github.com/JoshOn360Hz/HorizonTravels-webyear1" target="_blank" class="project-link-btn">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
-      </div> 
-
-      <div class="project-card">
-        <img src="img\eligibility.png" alt="EligibilityBypass Logo" class="project-logo rounded-logo" style="width: 40%;">
-        <h3>EligibilityBypass</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/FILE.png" alt="FILE">
-
-        </div>
-        <p>EligibilityBypass allows you to replace eligibility files used to control region restricted features such as alternate app stores on jailbroken iOS devices.</p>
-        <a href="https://github.com/JoshOn360Hz/EligibilityBypass/" target="_blank" class="project-link-btn">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
-
+        <button class="app-button">Learn More</button>
       </div>
 
-      <div class="project-card">
-        <img src="img\led.png" alt="Arduino Coms Loop" class="project-logo rounded-logo" style="width: 40%;">
-        <h3>Coms Loop</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/CPP.png" alt="cpp">
+      <div class="app-card" data-app="techbyjosh">
+        <div class="app-icon">
+          <img src="img/project-logos/tbj-logo.png" alt="TechByJosh Website" class="app-icon-img">
         </div>
-
-        <p>Using an arduino, photoresistor and an LED to transmit bytes and decode them in to outputs.</p>
-        <a href="https://app.arduino.cc/sketches/1edd2233-3956-43df-a079-eebec21027b4?view-mode=preview" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fas fa-microchip"></i> Arduino Web Editor
-        </a>
-        <a href="https://github.com/JoshOn360Hz/ComsLoopArduino" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-github"></i>  View on GitHub
-        </a>
-      </div>
-
-        <div class="project-card">
-        <img src="img\r1.png" alt="R1 Logo" class="project-logo rounded-logo" style="width: 40%;">
-        <h3>R1 Modification</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/FILE.png" alt="FILE">
-
-        </div>
-        <p>Modifications I have made to a Rabbit R1 to customise the custom android experience. Emulating stock features in addition to stock android.</p>
-        <a href="https://github.com/JoshOn360Hz/Making-the-R1-useful" target="_blank" class="project-link-btn">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
-      </div>
-
-      <div class="project-card">
-        <img src="img/mirror.png" alt="SmartMirrorWeb Logo" class="project-logo rounded-logo" style="width: 40%;">
-        <h3>Smart Mirror Web</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/PYTHON.png" alt="Python">
-          <img src="assets/skills/HTML.png" alt="HTML">
-          <img src="assets/skills/CSS.png" alt="CSS">
-          <img src="assets/skills/JS.png" alt="JS">
-        </div>
-
-        <p>Smart Mirror Web is a web-based mirror OS that displays date, time, weather and calendar information. Designed for integration into smart mirrors.</p>
-        <a href="https://github.com/JoshOn360Hz/smartmirrorweb" target="_blank" class="project-link-btn">
-          <i class="bi bi-github"></i> View on GitHub
-        </a>
-
-      </div>
-
-      <div class="project-card">
-        <img src="img\tbj-logo.png" alt="Website Logo" class="project-logo rounded-logo" style="width: 40%;">
         <h3>TechByJosh</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/HTML.png" alt="HTML">
-          <img src="assets/skills/CSS.png" alt="CSS">
-          <img src="assets/skills/JS.png" alt="JS">
+        <p>The website for my tech support business built with JS, CSS and HTML. Professional services with modern design.</p>
+        <div class="app-features">
+          <span class="feature-tag">HTML</span>
+          <span class="feature-tag">CSS</span>
+          <span class="feature-tag">JavaScript</span>
         </div>
+        <button class="app-button">Learn More</button>
+      </div>
+    </div>
 
-        <p>The Website for my tech support business Built with JS, CSS and HTML.</p>
-        <a href="https://techbyjosh.dev/" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-browser-safari"></i>View Website
-        </a>
-        <a href="https://github.com/JoshOn360Hz/TechByJosh" target="_blank"class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-github"></i>View on GitHub</a>
+    <div class="view-more-container">
+      <button class="view-more-button" id="viewMoreBtn">
+        <span class="view-more-text">View More Projects</span>
+        <i class="fas fa-chevron-down view-more-icon"></i>
+      </button>
+    </div>
+  </section>
+
+  <section id="more-projects" class="apps-section" style="background: #f5f7fa;">
+    <div class="section-header">
+      <h2>More Projects</h2>
+      <p>Explore my complete portfolio of innovative solutions, from hardware projects to creative applications.</p>
+    </div>
+
+    <div class="apps-grid">
+
+      <div class="app-card" data-app="eligibilitybypass">
+        <div class="app-icon">
+          <img src="img/project-logos/eligibility.png" alt="EligibilityBypass" class="app-icon-img">
+        </div>
+        <h3>EligibilityBypass</h3>
+        <p>Replace eligibility files to control region restricted features on jailbroken iOS devices.</p>
+        <div class="app-features">
+          <span class="feature-tag">iOS</span>
+          <span class="feature-tag">Jailbreak</span>
+          <span class="feature-tag">System Mods</span>
+        </div>
+        <button class="app-button">Learn More</button>
       </div>
 
-      
+      <div class="app-card" data-app="comsloop">
+        <div class="app-icon">
+          <img src="img/project-logos/led.png" alt="Arduino Coms Loop" class="app-icon-img">
+        </div>
+        <h3>Coms Loop</h3>
+        <p>Arduino project using photoresistor and LED to transmit and decode bytes into outputs.</p>
+        <div class="app-features">
+          <span class="feature-tag">C++</span>
+          <span class="feature-tag">Arduino</span>
+          <span class="feature-tag">Hardware</span>
+        </div>
+        <button class="app-button">Learn More</button>
+      </div>
 
-      <div class="project-card">
-        <img src="img\val.png" alt="ValRandomiser Logo" class="project-logo rounded-logo" style="width: 40%;">
+      <div class="app-card" data-app="r1mod">
+        <div class="app-icon">
+          <img src="img/project-logos/r1.png" alt="R1 Modification" class="app-icon-img">
+        </div>
+        <h3>R1 Modification</h3>
+        <p>Custom modifications to Rabbit R1 Android experience, adding stock features and customizations.</p>
+        <div class="app-features">
+          <span class="feature-tag">Android</span>
+          <span class="feature-tag">Custom ROM</span>
+          <span class="feature-tag">Hardware Mod</span>
+        </div>
+        <button class="app-button">Learn More</button>
+      </div>
+
+      <div class="app-card" data-app="smartmirror">
+        <div class="app-icon">
+          <img src="img/project-logos/mirror.png" alt="Smart Mirror Web" class="app-icon-img">
+        </div>
+        <h3>Smart Mirror Web</h3>
+        <p>Web-based mirror OS displaying date, time, weather and calendar for smart mirror integration.</p>
+        <div class="app-features">
+          <span class="feature-tag">Python</span>
+          <span class="feature-tag">Web APIs</span>
+          <span class="feature-tag">IoT</span>
+        </div>
+        <button class="app-button">Learn More</button>
+      </div>
+
+      <div class="app-card" data-app="valrandomiser">
+        <div class="app-icon">
+          <img src="img/project-logos/val.png" alt="ValRandomiser" class="app-icon-img">
+        </div>
         <h3>ValRandomiser</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/C.png" alt="C">
-          <img src="assets/skills/HTML.png" alt="HTML">
-          <img src="assets/skills/CSS.png" alt="CSS">
-          <img src="assets/skills/JS.png" alt="JS">
+        <p>C application with nice UI to randomly select Valorant agents, also available as web WASM app.</p>
+        <div class="app-features">
+          <span class="feature-tag">C</span>
+          <span class="feature-tag">WebAssembly</span>
+          <span class="feature-tag">Gaming</span>
         </div>
-
-        <p>ValRandomiser is a C app that provides a nice UI to randomly select a valorant agent.</p>
-        <a href="https://joshon360hz.github.io/ValRandomiser-web/" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fas fa-code"></i>View WASM App
-        </a>
-        <a href="https://github.com/JoshOn360Hz/ValRandomiser" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="bi bi-github"></i>View on GitHub</a>
+        <button class="app-button">Learn More</button>
       </div>
 
-      <div class="project-card">
-        <img src="img\valios.png" alt="ValRandomiser Logo" class="project-logo rounded-logo" style="width: 40%;">
+      <div class="app-card" data-app="agents">
+        <div class="app-icon">
+          <img src="img/project-logos/valios.png" alt="Agents iOS" class="app-icon-img">
+        </div>
         <h3>Agents</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/SWIFT.png" alt="Swift">
-          <img src="assets/skills/SWIFTUI.png" alt="SwiftUI">
+        <p>SwiftUI remake of ValRandomiser with agent search and clean UI for Valorant agent selection.</p>
+        <div class="app-features">
+          <span class="feature-tag">Swift</span>
+          <span class="feature-tag">SwiftUI</span>
+          <span class="feature-tag">Gaming</span>
         </div>
-
-        <p>A SwiftUI remake of the Raylib ValRandomiser app, includes an agent search and a clean UI to match agents.</p>
-        <br>
-        <a href="https://github.com/JoshOn360Hz/Agents" target="_blank" class="project-link-btn">
-          <i class="bi bi-github"></i>View on GitHub</a>
+        <button class="app-button">Learn More</button>
       </div>
 
-      <div class="project-card">
-        <img src="img\favico.png" alt="Website Logo" class="project-logo rounded-logo" style="width: 40%;">
-        <h3>Portfolio Website</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/HTML.png" alt="HTML">
-          <img src="assets/skills/CSS.png" alt="CSS">
-          <img src="assets/skills/JS.png" alt="JS">
+      <div class="app-card" data-app="keypad">
+        <div class="app-icon">
+          <img src="img/project-logos/CTS.png" alt="Keypad Project" class="app-icon-img">
         </div>
-
-        <p>The Website you are currently looking at ! Built with JS , CSS and HTML.</p>
-        <br>
-        <br>
-
-        <a href="https://github.com/JoshOn360Hz/portfolio" target="_blank" class="project-link-btn">
-          <i class="bi bi-github"></i>View on GitHub</a>
-      </div>
-
-      <div class="project-card">
-        <img src="img\CTS.png" alt="CTS Logo" class="project-logo rounded-logo" style="width: 40%;">
         <h3>Keypad Project</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/CPP.png" alt="CPP">
-
+        <p>Escape room puzzle project featuring Arduino-based keycard and wiring system.</p>
+        <div class="app-features">
+          <span class="feature-tag">C++</span>
+          <span class="feature-tag">Arduino</span>
+          <span class="feature-tag">Hardware</span>
         </div>
-        <p>Escape room puzzle project featuring an Arduino-based keycard and wiring system.
-        </p>
-        <a href="https://app.arduino.cc/sketches/13683222-1e2f-4236-b747-e238dbb75ecc?view-mode=preview" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fas fa-microchip"></i> Arduino Web Editor
-        </a>
-        <a href="https://github.com/JoshOn360Hz/CTS-Project" target="_blank"class="project-link-btn"style="margin-top: 10px;">
-          <i class="bi bi-github"></i>View on GitHub</a>
+        <button class="app-button">Learn More</button>
       </div>
 
-      <div class="project-card">
-        <img src="img\gungame.png" alt="GG Logo" class="project-logo rounded-logo" style="width: 40%;">
+      <div class="app-card" data-app="gungame">
+        <div class="app-icon">
+          <img src="img/project-logos/gungame.png" alt="Gun Game" class="app-icon-img">
+        </div>
         <h3>Gun Game</h3>
-        <div class="project-tech-stack">
-          <img src="assets/skills/VERSE.png" alt="CPP">
-          <img src="assets/skills/UEFN.png" alt="CPP">
+        <p>Verse and UEFN Gun Game map with custom POIs created for a streamer friend.</p>
+        <div class="app-features">
+          <span class="feature-tag">Verse</span>
+          <span class="feature-tag">UEFN</span>
+          <span class="feature-tag">Fortnite</span>
         </div>
-        <p>A verse and UEFN Gun game map with custom POI'S that i created for a streamer friend.
-        </p>
-        <a href="com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true&arg=-IslandOverride%3D6788-1220-9273" target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fas fa-gamepad"></i> Play on Fortnite
+        <button class="app-button">Learn More</button>
+      </div>
+
+      <div class="app-card" data-app="portfolio">
+        <div class="app-icon">
+          <img src="img/project-logos/web-logo.png" alt="Portfolio Website" class="app-icon-img">
+        </div>
+        <h3>Portfolio Website</h3>
+        <p>The website you are currently looking at! Built with modern HTML, CSS and JavaScript.</p>
+        <div class="app-features">
+          <span class="feature-tag">HTML</span>
+          <span class="feature-tag">CSS</span>
+          <span class="feature-tag">JavaScript</span>
+        </div>
+        <button class="app-button">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="apps-section">
+    <div class="section-header">
+      <h2>What I Can Do</h2>
+      <p>From iOS development to web applications, I bring ideas to life with modern technologies.</p>
+    </div>
+
+    <div class="skills-container">
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+            <i class="fab fa-swift" style="color: white; font-size: 2rem;"></i>
+          </div>
+          <h3>iOS Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Swift</span>
+            <span class="skill-tag">SwiftUI</span>
+            <span class="skill-tag">Xcode</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+            <i class="fas fa-code" style="color: white; font-size: 2rem;"></i>
+          </div>
+          <h3>Web Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+            <i class="fas fa-microchip" style="color: white; font-size: 2rem;"></i>
+          </div>
+          <h3>Hardware & Systems</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">C/C++</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Tech Support</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="all-skills">
+        <h4>Complete Tech Stack</h4>
+        <div class="skills-pills">
+          <span class="skill-pill">Swift</span>
+          <span class="skill-pill">SwiftUI</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">HTML</span>
+          <span class="skill-pill">CSS</span>
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">C</span>
+          <span class="skill-pill">C++</span>
+          <span class="skill-pill">SQL</span>
+          <span class="skill-pill">Verse</span>
+          <span class="skill-pill">UEFN</span>
+          <span class="skill-pill">UI Design</span>
+          <span class="skill-pill">Arduino</span>
+          <span class="skill-pill">Flask</span>
+          <span class="skill-pill">iOS Development</span>
+          <span class="skill-pill">Web Development</span>
+          <span class="skill-pill">iOS APIs</span>
+          <span class="skill-pill">System Modifications</span>
+          <span class="skill-pill">Technical Support</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="contact-content">
+      <h2>Let's Work Together</h2>
+      <p>Have a project in mind? Let's discuss how we can bring your ideas to life.</p>
+      
+      <div class="contact-info">
+        <a href="mailto:joshimansfield@icloud.com" class="contact-item contact-button">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <span>Email</span>
         </a>
-        <a  target="_blank" class="project-link-btn" style="margin-top: 10px;">
-          <i class="fas fa-gamepad"></i> 6788-1220-9273
+        <a href="https://github.com/JoshOn360Hz" target="_blank" class="contact-item contact-button">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <span>GitHub</span>
         </a>
       </div>
-    
-    </div> 
-  </section>
-
-  <section id="skills" class="skills-section">
-    <h2>What I can do</h2>
-
-    <div class="skills-pills">
-      <span class="badge rounded-pill">CSS</span>
-      <span class="badge rounded-pill">JavaScript</span>
-      <span class="badge rounded-pill">HTML</span>
-      <span class="badge rounded-pill">Python</span>
-      <span class="badge rounded-pill">C</span>
-      <span class="badge rounded-pill">C++</span>
-      <span class="badge rounded-pill">Swift</span>
-      <span class="badge rounded-pill">SwiftUI</span>
-      <span class="badge rounded-pill">SQL</span>
-      <span class="badge rounded-pill">Verse</span>
-      <span class="badge rounded-pill">UEFN</span>
-      <span class="badge rounded-pill">UI Design</span>
-    
     </div>
   </section>
-    <br>
-    <br>
-  
-<div class="contact">
-  <input type="checkbox" id="toggleContact" hidden>
 
-  <label for="toggleContact" class="btn btn-secondary rounded-pill contact-btn">
-    <i class="bi bi-chat-fill"></i> Contact Me
-  </label>
-
-  <div id="contactCard" class="card shadow-lg"style="border-radius: 20px;">
-    <div class="card-header text-white d-flex justify-content-between align-items-center bg-dark" style="border-radius: 20px;">
-      <span>Contact me</span>
-      <label for="toggleContact" class="btn-close btn-close-white" aria-label="Close"></label>
-    </div>
-
-    <div class="card-body bg-dark text-white" style="border-radius: 20px;">
-      <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='tel:07453331649'">
-        <i class="bi bi-telephone-fill"></i> Call Me
-      </button>
-      <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='mailto:joshimansfield@icloud.com'">
-        <i class="bi bi-envelope-fill"></i> Email Me
-      </button>
-      <button class="btn btn-primary rounded-pill w-100 mb-2" onclick="window.location.href='sms:07453331649'">
-        <i class="bi bi-chat-dots-fill"></i> Text Me
-      </button>
-    </div>
-
+  <div class="footer">
+    <p>© 2025 Josh Mansfield. All rights reserved.</p>
   </div>
 
-</div>
-
-</main>
-<div id="custom-cursor"></div>
-
-<footer style="text-align:center; padding:20px; font-size:0.8rem; opacity:0.6;">
-  © 2025 Josh Mansfield. All rights reserved.
-</footer>
+  <div class="modal-overlay" id="appModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModal">&times;</button>
+      <div class="modal-body">
+        <div class="modal-icon" id="modalIcon">
+          <img id="modalIconImg" src="" alt="" style="width: 100%; height: 100%; object-fit: cover; border-radius: 25px;">
+        </div>
+        <h2 class="modal-title" id="modalTitle">App Title</h2>
+        <p class="modal-description" id="modalDescription">App description goes here...</p>
+        
+        <div class="modal-screenshots" id="modalScreenshots">
+        </div>
+        
+        <div class="modal-actions" id="modalActions">
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
+<script src="scripts.js"></script>
+
 <noscript>
   <div style="
-    background: black;
+    background: #1d1d1f;
     color: white;
     text-align: center;
     padding: 10px;
-    font-family: 'Oswald', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     font-size: 0.9rem;
   ">
     JavaScript is disabled. For the best experience, please enable it.
   </div>
-
 </noscript>
 
 </html>
-
-<script src="scripts.js"></script>
   
