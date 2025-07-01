@@ -197,12 +197,10 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Fallback for when Font Awesome doesn't load */
 .floating-card i:before {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands";
 }
 
-/* Additional Linux font rendering fixes */
 @supports not (backdrop-filter: blur(10px)) {
     .floating-card {
         background: rgba(255, 255, 255, 0.5);
@@ -922,7 +920,6 @@ body {
         opacity: 0.4;
     }
     
-    /* Hide every 3rd floating card on mobile for cleaner look */
     .floating-card:nth-child(3n) {
         display: none;
     }
