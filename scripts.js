@@ -5,7 +5,8 @@ const appData = {
     description: 'Cumulus is a simple, Vision OS inspired weather app available on iOS, iPadOS and macOS. Experience beautiful weather visualization with a clean, modern interface.',
     screenshots: ['img/screenshots/cumulus/sc1.png', 'img/screenshots/cumulus/sc2.png', 'img/screenshots/cumulus/sc3.png'],
     appStoreUrl: 'https://apps.apple.com/us/app/cumulus/id6742735497',
-    githubUrl: 'https://github.com/JoshOn360Hz/CumulusApp'
+    githubUrl: 'https://github.com/JoshOn360Hz/CumulusApp',
+    websiteUrl: 'https://getcumulus.app'
   },
   pinboard: {
     icon: 'img/project-logos/pinboard.png',
@@ -13,7 +14,8 @@ const appData = {
     description: 'PinBoard is a notes and reminders app that uses live activities, available on iOS and iPadOS. Stay organized with beautiful notes that come alive on your device.',
     screenshots: ['img/screenshots/pinboard/sc1.png', 'img/screenshots/pinboard/sc2.png', 'img/screenshots/pinboard/sc3.png'],
     appStoreUrl: 'https://apps.apple.com/us/app/pinboard-better-notes/id6747376814',
-    githubUrl: 'https://github.com/JoshOn360Hz/PinBoard-App'
+    githubUrl: 'https://github.com/JoshOn360Hz/PinBoard-App',
+    websiteUrl: 'https:///getpinboard.app'
   },
   tailtag: {
     icon: 'img/project-logos/TailTag.png',
@@ -21,7 +23,8 @@ const appData = {
     description: 'TailTag is a app that helps you track aircraft you have seen. Perfect for aviation enthusiasts who want to log their spotted aircraft with detailed information.',
     screenshots: ['img/screenshots/tailtag/sc1.png', 'img/screenshots/tailtag/sc2.png', 'img/screenshots/tailtag/sc3.png'],
     appStoreUrl: 'https://apps.apple.com/us/app/tailtag/id6747738157',
-    githubUrl: 'https://github.com/JoshOn360Hz/TailTagApp'
+    githubUrl: 'https://github.com/JoshOn360Hz/TailTagApp',
+    websiteUrl: 'https://gettailtag.app'
   },
   appsbyjosh: {
     icon: 'img/project-logos/abj.png',
