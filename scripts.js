@@ -26,6 +26,15 @@ const appData = {
     githubUrl: 'https://github.com/JoshOn360Hz/TailTagApp',
     websiteUrl: 'https://gettailtag.app'
   },
+  flipcards: {
+    icon: 'img/project-logos/flipcards.png',
+    title: 'FlipCards',
+    description: 'FlipCards is a beautiful study and flashcards app for iOS. Master any subject with an intuitive interface designed for effective studying.',
+    screenshots: ['img/screenshots/flipcards/sc1.png', 'img/screenshots/flipcards/sc2.png', 'img/screenshots/flipcards/sc3.png'],
+    testflightUrl: 'https://testflight.apple.com/join/2hBxWMNR',
+    githubUrl: 'https://github.com/JoshOn360Hz/FlipCardsApp',
+    websiteUrl: 'https://getflipcards.app'
+  },
   appsbyjosh: {
     icon: 'img/project-logos/abj.png',
     title: 'Apps By Josh',
@@ -227,6 +236,15 @@ function setupModal() {
       appStoreBtn.className = 'download-button';
       appStoreBtn.innerHTML = '<i class="fab fa-apple"></i> View on App Store';
       modalActions.appendChild(appStoreBtn);
+    }
+    
+    if (app.testflightUrl) {
+      const testflightBtn = document.createElement('a');
+      testflightBtn.href = app.testflightUrl;
+      testflightBtn.target = '_blank';
+      testflightBtn.className = 'download-button';
+      testflightBtn.innerHTML = '<i class="fas fa-flask"></i> Join TestFlight';
+      modalActions.appendChild(testflightBtn);
     }
     
     if (app.websiteUrl) {
