@@ -112,13 +112,19 @@ const appData = {
     fortniteUrl: 'com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true&arg=-IslandOverride%3D6788-1220-9273',
     githubUrl: null
   },
-  portfolio: {
-    icon: 'img/project-logos/web-logo.png',
-    title: 'Portfolio Website',
-    description: 'The website you are currently looking at! Built with modern HTML, CSS and JavaScript featuring a beautiful Apple-inspired design.',
-    websiteUrl: null,
-    githubUrl: 'https://github.com/JoshOn360Hz/portfolio'
-  }
+  spotlightmanager: {
+  icon: 'img/project-logos/newspotlight.png',
+  title: 'Spotlight Manager',
+  description: 'A Python script to enable or disable the redesigned Spotlight and Launchpad UI introduced in macOS Tahoe beta.',
+  githubUrl: 'https://github.com/JoshOn360Hz/New-Spotlight-Manager',
+},
+portfolio: {
+  icon: 'img/project-logos/web-logo.png',
+  title: 'Portfolio Website',
+  description: 'The website you are currently looking at! Built with modern HTML, CSS and JavaScript featuring a beautiful Apple-inspired design.',
+  websiteUrl: null,
+  githubUrl: 'https://github.com/JoshOn360Hz/portfolio'
+}
 };
 
 const imageCache = new Map();

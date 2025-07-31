@@ -581,9 +581,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.screenshot-item:hover .screenshot-img {
-    transform: scale(1.05);
-}
+
 
 .screenshot-placeholder {
     height: 150px;
