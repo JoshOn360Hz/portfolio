@@ -1231,6 +1231,61 @@ body {
         box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
     }
 
+    #experience {
+        background: linear-gradient(135deg, #1c1c1e 0%, #2c2c2e 100%) !important;
+    }
+
+    .experience-timeline::before {
+        background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .experience-icon-inner {
+        border: 4px solid #1c1c1e;
+    }
+
+    .experience-content {
+        background: #1c1c1e !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    .experience-content:hover {
+        background: #1c1c1e !important;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4) !important;
+    }
+
+    .experience-header h3 {
+        color: #ffffff !important;
+    }
+
+    .experience-company {
+        color: #667eea;
+    }
+
+    .experience-company a {
+        color: #667eea;
+    }
+
+    .experience-company a:hover {
+        color: #8bb4ff;
+    }
+
+    .experience-description {
+        color: #a1a1a6;
+    }
+
+    .experience-projects h4 {
+        color: #ffffff;
+    }
+
+    .experience-projects li {
+        color: #a1a1a6;
+    }
+
+    .experience-projects li::before {
+        color: #667eea;
+    }
+
     @media (max-width: 768px) {
         .nav-menu.active {
             background: rgba(28, 28, 30, 0.98);
