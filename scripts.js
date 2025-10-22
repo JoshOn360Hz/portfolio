@@ -31,7 +31,7 @@ const appData = {
     title: 'FlipCards',
     description: 'FlipCards is a beautiful study and flashcards app for iOS. Master any subject with an intuitive interface designed for effective studying.',
     screenshots: ['img/screenshots/flipcards/sc1.png', 'img/screenshots/flipcards/sc2.png', 'img/screenshots/flipcards/sc3.png'],
-    testflightUrl: 'https://testflight.apple.com/join/2hBxWMNR',
+    appStoreUrl: 'https://apps.apple.com/gb/app/flipcards-revision-made-easy/id6749154468',
     githubUrl: 'https://github.com/JoshOn360Hz/FlipCardsApp',
     websiteUrl: 'https://getflipcards.app'
   },
