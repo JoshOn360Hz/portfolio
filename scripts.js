@@ -124,6 +124,13 @@ portfolio: {
   description: 'The website you are currently looking at! Built with modern HTML, CSS and JavaScript featuring a beautiful Apple-inspired design.',
   websiteUrl: null,
   githubUrl: 'https://github.com/JoshOn360Hz/portfolio'
+},
+uweai: {
+  icon: 'img/project-logos/UWEAI.png',
+  title: 'UWE AI Racing Society',
+  description: 'Website for the UWE AI Autonomous Racing Society, showcasing autonomous racing technology and society activities. Built with modern web technologies.',
+  websiteUrl: 'https://uweai.co.uk',
+  githubUrl: null
 }
 };
 
