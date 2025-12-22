@@ -453,7 +453,7 @@ document.addEventListener('DOMContentLoaded', function() {
   setupMobileNavigation();
   setupModal();
   setupScrollAnimations();
-  setupNavbarBehavior();
+  // setupNavbarBehavior(); // Commented out to keep navbar always visible
   preloadAppImages();
   setupViewMoreProjects();
   
