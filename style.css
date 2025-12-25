@@ -311,6 +311,20 @@ body {
     animation-delay: 0.4s;
 }
 
+.hero-location {
+    font-size: 1.2rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s ease 0.5s forwards;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .hero-subtitle {
     font-size: 1.25rem;
     color: #6e6e73;
@@ -322,8 +336,8 @@ body {
 }
 
 .cta-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
     border: none;
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
@@ -334,16 +348,15 @@ body {
     opacity: 0;
     transform: translateY(30px);
     animation: slideUp 1s ease 0.8s forwards;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
 }
 
 .cta-button:hover {
+    background: rgba(102, 126, 234, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
 }
 
 .apps-section {
-    padding: 6rem 2rem;
+    padding: 2rem 2rem;
     background: #ffffff;
 }
 
@@ -450,9 +463,9 @@ body {
 }
 
 .app-button {
-    background: transparent;
+    background: rgba(102, 126, 234, 0.1);
     color: #667eea;
-    border: 2px solid #667eea;
+    border: none;
     padding: 0.75rem 1.5rem;
     border-radius: 25px;
     cursor: pointer;
@@ -462,8 +475,8 @@ body {
 }
 
 .app-button:hover {
-    background: #667eea;
-    color: white;
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
     transform: translateY(-2px);
 }
 
@@ -614,15 +627,15 @@ body {
 }
 
 .download-button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
     border: none;
 }
 
 .beta-button {
-    background: transparent;
+    background: rgba(255, 107, 53, 0.1);
     color: #ff6b35;
-    border: 2px solid #ff6b35;
+    border: none;
 }
 
 .download-button:hover, .beta-button:hover {
@@ -631,12 +644,13 @@ body {
 }
 
 .download-button:hover {
-    color: white;
+    background: rgba(102, 126, 234, 0.2);
+    color: #667eea;
 }
 
 .beta-button:hover {
-    background: #ff6b35;
-    color: white;
+    background: rgba(255, 107, 53, 0.2);
+    color: #ff6b35;
 }
 
 .contact-section {
@@ -1141,14 +1155,14 @@ body {
     }
 
     .app-button {
-        background: rgba(255, 255, 255, 0.1);
-        color: #ffffff;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(102, 126, 234, 0.2);
+        color: #8bb4ff;
+        border: none;
     }
 
     .app-button:hover {
-        background: #667eea;
-        color: white;
+        background: rgba(102, 126, 234, 0.3);
+        color: #8bb4ff;
     }
 
     .modal-overlay {
@@ -1224,11 +1238,41 @@ body {
 
     
     .view-more-button {
-        box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+        background: rgba(102, 126, 234, 0.2);
+        color: #8bb4ff;
+        box-shadow: none;
     }
 
     .view-more-button:hover {
-        box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+        background: rgba(102, 126, 234, 0.3);
+        box-shadow: none;
+    }
+
+    .cta-button, .download-button, .download-cv-button {
+        background: rgba(102, 126, 234, 0.2);
+        color: #8bb4ff;
+        box-shadow: none;
+    }
+    
+    .cta-button:hover, .download-button:hover, .download-cv-button:hover {
+        background: rgba(102, 126, 234, 0.3);
+        color: #8bb4ff;
+        box-shadow: none;
+    }
+
+    .beta-button {
+        background: rgba(255, 107, 53, 0.2);
+        color: #ff6b35;
+        border: none;
+    }
+    
+    .beta-button:hover {
+        background: rgba(255, 107, 53, 0.3);
+    }
+
+    .experience-period {
+        background: rgba(102, 126, 234, 0.2);
+        color: #8bb4ff;
     }
 
     #experience {
@@ -1314,11 +1358,11 @@ body {
 }
 
 .view-more-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: rgba(102, 126, 234, 0.1);
   border: none;
   padding: 1rem 2rem;
   border-radius: 50px;
-  color: white;
+  color: #667eea;
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
@@ -1326,12 +1370,11 @@ body {
   align-items: center;
   gap: 0.75rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
 }
 
 .view-more-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(102, 126, 234, 0.4);
+  background: rgba(102, 126, 234, 0.2);
 }
 
 .view-more-button:active {
@@ -1438,8 +1481,8 @@ body {
 }
 
 .experience-period {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
   padding: 0.5rem 1rem;
   border-radius: 25px;
   font-size: 0.9rem;
@@ -1599,20 +1642,18 @@ body {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
   text-decoration: none;
   border-radius: 50px;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .download-cv-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
-  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  background: rgba(102, 126, 234, 0.2);
 }
 
 .download-cv-button i {
