@@ -65,6 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     drawerFilterButtons.forEach(button => {
         button.addEventListener('click', function() {
             const filter = this.getAttribute('data-filter');
+            const noResults = document.getElementById('noResults');
             
             // Update active button
             drawerFilterButtons.forEach(btn => btn.classList.remove('active'));
@@ -74,6 +75,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (drawerSearch) {
                 drawerSearch.value = '';
             }
+            
+            // Hide no results when using filters
+            if (noResults) {
+                noResults.style.display = 'none';
+            }
+            drawerProjectsGrid.style.display = '';
             
             // Filter projects
             const drawerCards = drawerProjectsGrid.querySelectorAll('.project-card');
@@ -94,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
         drawerSearch.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
             const drawerCards = drawerProjectsGrid.querySelectorAll('.project-card');
+            const noResults = document.getElementById('noResults');
             
             // Reset filter to "All" when searching
             if (searchTerm) {
@@ -105,6 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
             
+            let visibleCount = 0;
             drawerCards.forEach(card => {
                 const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
                 const description = card.querySelector('.project-description')?.textContent.toLowerCase() || '';
@@ -118,10 +127,20 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (matches) {
                     card.style.display = '';
+                    visibleCount++;
                 } else {
                     card.style.display = 'none';
                 }
             });
+            
+            // Show or hide no results message
+            if (visibleCount === 0 && searchTerm) {
+                noResults.style.display = 'flex';
+                drawerProjectsGrid.style.display = 'none';
+            } else {
+                noResults.style.display = 'none';
+                drawerProjectsGrid.style.display = '';
+            }
         });
     }
     
@@ -134,6 +153,18 @@ document.addEventListener('DOMContentLoaded', function() {
         // Clear search when opening drawer
         if (drawerSearch) {
             drawerSearch.value = '';
+            // Auto-focus search after drawer animation
+            setTimeout(() => {
+                drawerSearch.focus();
+            }, 300);
+        }
+        // Reset no results state
+        const noResults = document.getElementById('noResults');
+        if (noResults) {
+            noResults.style.display = 'none';
+        }
+        if (drawerProjectsGrid) {
+            drawerProjectsGrid.style.display = '';
         }
     }
     
