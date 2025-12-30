@@ -267,9 +267,9 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
     z-index: 2000;
     opacity: 0;
     visibility: hidden;
@@ -287,7 +287,11 @@ main {
     left: 0;
     width: 100%;
     max-height: 85vh;
-    background: var(--surface);
+    background: 
+        linear-gradient(135deg, rgba(94, 92, 230, 0.05) 0%, rgba(112, 105, 255, 0.05) 30%, rgba(24, 24, 26, 0.05) 60%, rgba(94, 92, 230, 0.05) 100%),
+        rgba(28, 28, 30, 0.05);
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
     border-radius: 24px 24px 0 0;
     padding: 0;
     transform: translateY(100%);
@@ -295,6 +299,8 @@ main {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    border: 1px solid rgba(94, 92, 230, 0.2);
+    box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .app-drawer-overlay.active .app-drawer {
@@ -310,8 +316,10 @@ main {
     align-items: center;
     margin-bottom: 0;
     padding: 32px 32px 16px 32px;
-    background: var(--surface);
-    border-bottom: 1px solid var(--border);
+    background: rgba(28, 28, 30, 0.7);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     z-index: 10;
 }
 
@@ -333,16 +341,19 @@ main {
     position: relative;
     display: flex;
     align-items: center;
-    background: var(--bg);
-    border: 1px solid var(--border);
+    background: rgba(44, 44, 46, 0.35);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(94, 92, 230, 0.3);
     border-radius: 24px;
     padding: 10px 16px;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease, background 0.2s ease;
     width: 300px;
 }
 
 .drawer-search-container:focus-within {
     border-color: var(--indigo);
+    background: rgba(44, 44, 46, 0.45);
 }
 
 .drawer-search-container i {
@@ -393,8 +404,10 @@ main {
 }
 
 .drawer-filter-btn {
-    background: var(--bg);
-    border: 1px solid var(--border);
+    background: rgba(44, 44, 46, 0.35);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(94, 92, 230, 0.25);
     color: var(--text-secondary);
     padding: 10px 16px;
     border-radius: 24px;
@@ -409,8 +422,9 @@ main {
 }
 
 .drawer-filter-btn:hover {
-    background: var(--surface);
+    background: rgba(44, 44, 46, 0.5);
     color: var(--text);
+    border-color: rgba(94, 92, 230, 0.4);
 }
 
 .drawer-filter-btn.active {
@@ -426,7 +440,7 @@ main {
     padding: 24px 32px 32px 32px;
     overflow-y: auto;
     flex: 1;
-    background: var(--surface);
+    background: transparent;
 }
 
 /* Show badges in app drawer (limit to 3) */
@@ -464,14 +478,23 @@ main {
 }
 
 .project-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
+    background: rgba(44, 44, 46, 0.35);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-lg);
     padding: 32px;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-sm);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    background: rgba(44, 44, 46, 0.5);
+    border-color: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .project-card.hidden {
