@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Josh Mansfield - London-based iOS and frontend developer specializing in Swift, React, and modern web technologies.">
+    <meta name="author" content="Josh Mansfield">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Josh Mansfield" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshmansfielddevelopment.com">
+    <meta property="og:title" content="Josh Mansfield - iOS & Frontend Developer">
+    <meta property="og:description" content="London-based iOS and frontend developer.">
+    <meta property="og:image" content="assets/favico/web-app-manifest-512x512.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Josh Mansfield - iOS & Frontend Developer">
+    <meta name="twitter:description" content="London-based iOS and frontend developer specializing in Swift, React, and modern web technologies.">
+    <meta name="twitter:image" content="assets/favico/web-app-manifest-512x512.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favico/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favico/site.webmanifest" />
+
+    <title>Josh Mansfield</title>
+
+    <link rel="stylesheet" href="src/style.css">
+    <script src="https://kit.fontawesome.com/e2cf8702e2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <main>
+        <section id="home" class="section hero">
+            <div class="hero-content">
+                <div class="hero-header">
+                    <h2 class="greeting">Hi, I'm Josh 👋</h2>
+                    <p class="intro-lead">I am a London and Bristol based mobile and frontend developer specializing in Swift, React and modern web technologies.</p>
+                </div>
+                <h3 class="intro-subtitle">Why Choose Me?</h3>
+                <div class="intro-cards">
+                    <div class="intro-card">
+                        <div class="intro-icon">
+                            <i class="fa-brands fa-apple"></i>
+                        </div>
+                        <p>Expertise in Swift, SwiftUI, and iOS development with multiple published apps on the App Store.</p>
+                    </div>
+                    <div class="intro-card">
+                        <div class="intro-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <p>Web development using React, TypeScript, and modern frameworks to build responsive applications.</p>
+                    </div>
+                    <div class="intro-card">
+                        <div class="intro-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+                        <p>Currently working as a Junior Developer while at university working on React, React Native and Electron apps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="ios">iOS</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="hardware">Hardware</button>
+                <button class="filter-btn" data-filter="other">Other</button>
+                
+            </div>
+            <div class="projects-grid">
+                <!-- iOS Projects-->
+                <div class="project-card" data-category="ios">
+                    <div class="project-icon">
+                        <img src="assets/apps/iOS/cumulus.png" alt="Cumulus app icon">
+                    </div>
+                    <h3>Cumulus</h3>
+                    <p class="project-description">A simple, Vision OS inspired weather app available on iOS, iPadOS and macOS. Beautiful design meets functionality.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">WeatherKit</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://apps.apple.com/us/app/cumulus/id6742735497', '_blank')">
+                            <i class="fa-brands fa-apple"></i> App Store
+                        </button>
+                        <button class="download-button" onclick="window.open('https://getcumulus.app', '_blank')">
+                            <i class="fa fa-globe"></i> Website
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/CumulusApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ios">
+                    <div class="project-icon">
+                        <img src="assets/apps/iOS/pinboard.png" alt="PinBoard app icon">
+                    </div>
+                    <h3>PinBoard</h3>
+                    <p class="project-description">A notes and reminders app that uses live activities, available on iOS and iPadOS. Stay organized with style.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">Live Activities</span>
+                        <span class="badge">CoreData</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://apps.apple.com/us/app/pinboard-better-notes/id6747376814', '_blank')">
+                            <i class="fa-brands fa-apple"></i> App Store
+                        </button>
+                        <button class="download-button" onclick="window.open('https://getpinboard.app', '_blank')">
+                            <i class="fa fa-globe"></i> Website
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/PinBoardApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ios">
+                    <div class="project-icon">
+                        <img src="assets/apps/iOS/TailTag.png" alt="TailTag app icon">
+                    </div>
+                    <h3>TailTag</h3>
+                    <p class="project-description">A planespotter app that helps you track aircraft you have seen. Perfect for aviation enthusiasts.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">CoreData</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://apps.apple.com/us/app/tailtag/id6747738157', '_blank')">
+                            <i class="fa-brands fa-apple"></i> App Store
+                        </button>
+                        <button class="download-button" onclick="window.open('https://gettailtag.app', '_blank')">
+                            <i class="fa fa-globe"></i> Website
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/TailTagApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="ios">
+                    <div class="project-icon">
+                        <img src="assets/apps/iOS/flipcards.png" alt="FlipCards app icon">
+                    </div>
+                    <h3>FlipCards</h3>
+                    <p class="project-description">A flashcard app designed to help you study and memorize information efficiently. Perfect for students and lifelong learners.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">CoreData</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://apps.apple.com/us/app/tailtag/id6747738157', '_blank')">
+                            <i class="fa-brands fa-apple"></i> App Store
+                        </button>
+                        <button class="download-button" onclick="window.open('https://getflipcards.app', '_blank')">
+                            <i class="fa fa-globe"></i> Website
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/FlipCardsApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <!-- Web Projects-->
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <img src="assets/apps/web/ht.png" alt="Horizon Travels app icon">
+                    </div>
+                    <h3>Horizon Travels</h3>
+                    <p class="project-description">A web-based flight booking system built with Python (Flask), CSS, JavaScript, HTML and SQL.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">Flask</span>
+                        <span class="badge">SQL</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/HorizonTravels-webyear1', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <img src="assets/apps/web/UWEAI.png" alt="UWE AI app icon">
+                    </div>
+                    <h3>UWE AI</h3>
+                    <p class="project-description">Website for the UWE AI Autonomous Racing Society, showcasing autonomous racing technology and society activities. Built with modern web technologies.</p>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://uweai.co.uk/', '_blank')">
+                            <i class="fa fa-globe"></i> Website
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/UWE-FSAI/Web', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <img src="assets/apps/web/tbj-logo.png" alt="Tech By Josh icon">
+                    </div>
+                    <h3>Tech By Josh</h3>
+                    <p class="project-description">The website for my tech support business built with JavaScript, CSS and HTML. Professional services with modern design.</p>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://techbyjosh.dev/', '_blank')">
+                            <i class="fa fa-globe"></i> Website
+                        </button>
+                    </div>
+                </div>
+                     <div class="project-card" data-category="web">
+                    <div class="project-icon">
+                        <img src="assets/apps/web/mirror.png" alt="Smart Mirror Web icon">
+                    </div>
+                    <h3>Smart Mirror Web</h3>
+                    <p class="project-description">Web-based mirror OS displaying date, time, weather and calendar for smart mirror integration.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Flask</span>
+                        <span class="badge">API</span>
+                        <span class="badge">IOT</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/smartmirrorweb', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <!-- Hardware Projects-->
+                <div class="project-card" data-category="hardware">
+                    <div class="project-icon">
+                        <img src="assets/apps/hardware/CTS.png" alt="Keyboard CTS icon">
+                    </div>
+                    <h3>Keypad Project</h3>
+                    <p class="project-description">Escape room puzzle project featuring Arduino-based keycard and wiring system.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Arduino</span>
+                        <span class="badge">C++</span>
+                        <span class="badge">Wiring</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-arduino" onclick="window.open('https://app.arduino.cc/sketches/13683222-1e2f-4236-b747-e238dbb75ecc?view-mode=preview', '_blank')">
+                            <i class="fas fa-microchip"></i> Arduino Web Editor
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/CTS-Project', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="hardware">
+                    <div class="project-icon">
+                        <img src="assets/apps/hardware/r1.png" alt="Making the R1 useful icon">
+                    </div>
+                    <h3>R1 Modification</h3>
+                    <p class="project-description">Custom modifications to Rabbit R1 Android experience, adding stock features and customizations.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Android</span>
+                        <span class="badge">Custom ROM</span>
+                        <span class="badge">Hardware</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/Making-the-R1-useful', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="hardware">
+                    <div class="project-icon">
+                        <img src="assets/apps/hardware/led.png" alt="Comms Loop icon">
+                    </div>
+                    <h3>Comms Loop</h3>
+                    <p class="project-description">Using an Arduino, photoresistor and an LED to transmit bytes and decode them into outputs. A creative hardware communication solution.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Arduino</span>
+                        <span class="badge">Electronics</span>
+                        <span class="badge">Hardware</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-arduino" onclick="window.open('https://app.arduino.cc/sketches/1edd2233-3956-43df-a079-eebec21027b4?view-mode=preview', '_blank')">
+                            <i class="fas fa-microchip"></i> Arduino Web Editor
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/ComsLoopArduino', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                     <div class="project-card" data-category="hardware">
+                    <div class="project-icon">
+                        <img src="assets/apps/hardware/eligibility.png" alt="Eligibility Bypass icon">
+                    </div>
+                    <h3>Eligibility Bypass</h3>
+                    <p class="project-description">Replace eligibility files to control region restricted features on jailbroken iOS devices.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Jailbreak</span>
+                        <span class="badge">iOS</span>
+                        <span class="badge">System Modification</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/EligibilityBypass', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <!-- Other Projects-->
+                 <div class="project-card" data-category="other">
+                    <div class="project-icon">
+                        <img src="assets/apps/other/val.png" alt="ValRandomiser icon">
+                    </div>
+                    <h3>Val Randomiser</h3>
+                    <p class="project-description">C application with nice UI to randomly select Valorant agents, also available as web WASM app.</p>
+                    <div class="tech-badges">
+                        <span class="badge">C</span>
+                        <span class="badge">Gaming</span>
+                        <span class="badge">WASM</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://app.arduino.cc/sketches/1edd2233-3956-43df-a079-eebec21027b4?view-mode=preview', '_blank')">
+                            <i class="fas fa-code"></i> View WASM App
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://joshon360hz.github.io/ValRandomiser-web/', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="other">
+                    <div class="project-icon">
+                        <img src="assets/apps/other/newspotlight.png" alt="New Spotlight icon">
+                    </div>
+                    <h3>New Spotlight Manager</h3>
+                    <p class="project-description">A Python script to enable or disable the redesigned Spotlight and Launchpad UI in the macOS Tahoe beta.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Python</span>
+                        <span class="badge">macOS</span>
+                        <span class="badge">System Modification</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-github"onclick="window.open('https://github.com/JoshOn360Hz/New-Spotlight-Manager', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+                <div class="project-card" data-category="other">
+                    <div class="project-icon">
+                        <img src="assets/apps/other/jt1v1.png" alt="Jtempo 1v1 icon">
+                    </div>
+                    <h3>Jtempo 1v1</h3>
+                    <p class="project-description">A UEFN and Verse project for promoting a streamer friends brand</p>
+                    <div class="tech-badges">
+                        <span class="badge">UEFN</span>
+                        <span class="badge">Verse</span>
+                        <span class="badge">Gaming</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-fortnite" onclick="window.open('com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true&arg=-IslandOverride%3D3748-5335-6767&arg=-src%3D0&arg=-pl%3D02', '_blank')">
+                            <i class="fas fa-gamepad"></i> Play on Fortnite
+                        </button>
+                    </div>
+                </div>
+                     <div class="project-card" data-category="other">
+                    <div class="project-icon">
+                        <img src="assets/apps/other/gungame.png" alt="Gun Game icon">
+                    </div>
+                    <h3>Gun Game</h3>
+                    <p class="project-description">Verse and UEFN Gun Game map with custom POIs created for a streamer friend.</p>
+                    <div class="tech-badges">
+                        <span class="badge">UEFN</span>
+                        <span class="badge">Verse</span>
+                        <span class="badge">Gaming</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button-fortnite" onclick="window.open('com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true&arg=-IslandOverride%3D6788-1220-9273', '_blank')">
+                            <i class="fas fa-gamepad"></i> Play on Fortnite
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- App Drawer Overlay -->
+        <div class="app-drawer-overlay" id="appDrawer">
+            <div class="app-drawer">
+                <div class="app-drawer-header">
+                    <h3></h3>
+                    <div class="drawer-controls">
+                        <div class="drawer-search-container">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="text" id="drawerSearch" class="drawer-search" placeholder="Search projects...">
+                        </div>
+                        <div class="drawer-filters">
+                            <button class="drawer-filter-btn active" data-filter="all">All</button>
+                            <button class="drawer-filter-btn" data-filter="ios">iOS</button>
+                            <button class="drawer-filter-btn" data-filter="web">Web</button>
+                            <button class="drawer-filter-btn" data-filter="hardware">Hardware</button>
+                            <button class="drawer-filter-btn" data-filter="other">Other</button>
+                        </div>
+                    </div>
+                    <button class="drawer-close-btn" id="closeDrawer">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="app-drawer-grid" id="drawerProjects">
+                    <!-- Projects will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+
+        <section id="skills" class="section">
+            <h2 class="section-title">Skills & Expertise</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fa-brands fa-apple"></i>
+                        </div>
+                        <h3>iOS & Mobile</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">Swift & SwiftUI</div>
+                        <div class="skill-item">WidgetKit & Live Activities</div>
+                        <div class="skill-item">Core Data & WeatherKit</div>
+                        <div class="skill-item">React Native & Expo</div>
+                        <div class="skill-item">App Store Connect</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: linear-gradient(135deg, #06beb6 0%, #48b1bf 100%);">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">React & TypeScript</div>
+                        <div class="skill-item">HTML, CSS & JavaScript</div>
+                        <div class="skill-item">Tailwind & ShadCN</div>
+                        <div class="skill-item">Vite & Modern Tooling</div>
+                        <div class="skill-item">Responsive Design</div>
+                    </div>
+                </div>
+                <div class="skill-group">
+                    <div class="skill-header">
+                        <div class="skill-icon" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h3>Systems & Tools</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">C/C++ & Arduino</div>
+                        <div class="skill-item">Python & Flask</div>
+                        <div class="skill-item">System Modifications</div>
+                        <div class="skill-item">Git & Version Control</div>
+                        <div class="skill-item">Technical Support</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Junior Developer</h3>
+                            <p class="company">Pimento | <a href="https://getpimento.com" target="_blank">getpimento.com</a></p>
+                        </div>
+                        <span class="date">August 2025 – Current</span>
+                    </div>
+                    <p class="experience-description">
+                        As the sole frontend engineer, I rebuilt the warehouse app with a new TabView layout, card components, and improved flows, while also modernising the entire React web dashboard, updating every page and migrating the UI to ShadCN and building shared custom components. I also manage App Store Connect for app releases and testing.
+                    </p>
+                    <p class="experience-note">
+                        All prototypes were created in Photoshop and implemented using React and React Native with a shared component system.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">React</span>
+                        <span class="badge">Expo</span>
+                        <span class="badge">TypeScript</span>
+                        <span class="badge">React Native</span>
+                        <span class="badge">Tailwind</span>
+                        <span class="badge">Lucide</span>
+                        <span class="badge">App Store Connect</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Golang Internship</h3>
+                            <p class="company">University of the West of England</p>
+                        </div>
+                        <span class="date">July 2025 – Sept 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Mentoring students in Golang and software development, creating teaching materials, and developing tools for the Principles of Programming module.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">Golang</span>
+                        <span class="badge">Teaching</span>
+                        <span class="badge">Mentoring</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-brands fa-apple"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>iOS App Development</h3>
+                            <p class="company">Self-Employed | <a href="https://appsbyjosh.com" target="_blank">Appsbyjosh.com</a></p>
+                        </div>
+                        <span class="date">Jan 2024 – Current</span>
+                    </div>
+                    <p class="experience-description">
+                        Designing, developing, and publishing iOS apps using SwiftUI, WidgetKit, Combine, WeatherKit, Core Data, and Activity Kit. Managing full-stack development, testing, and deployment via the App Store and TestFlight.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">WidgetKit</span>
+                        <span class="badge">Core Data</span>
+                        <span class="badge">Activity Kit</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Web Development</h3>
+                            <p class="company">Self-Employed</p>
+                        </div>
+                        <span class="date">Jan 2020 – Aug 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Design and build responsive, mobile-first websites with a focus on user experience, accessibility, and SEO best practices. Providing end-to-end solutions for bespoke client projects, ensuring compliance with modern web standards.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">SEO</span>
+                        <span class="badge">Responsive Design</span>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Technical Support</h3>
+                            <p class="company">Self-Employed | <a href="https://techbyjosh.dev" target="_blank">Techbyjosh.dev</a></p>
+                        </div>
+                        <span class="date">Jan 2019 – Aug 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Providing technical consultation and affordable solutions for client issues, including hardware/software repairs, diagnostics, and network setups. Installing and maintaining systems such as cameras, servers, and access points.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">Hardware Repair</span>
+                        <span class="badge">Network Setup</span>
+                        <span class="badge">Diagnostics</span>
+                        <span class="badge">System Maintenance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-button-container">
+                <a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" class="cv-button">
+                    <i class="fa-solid fa-file-pdf"></i> View CV
+                </a>
+            </div>
+        </section>
+    </main>
+    
+    <nav class="dock">
+        <ul>
+            <li><a href="#home" title="Home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
+            <li class="projects-nav-link"><a href="#projects" title="Projects"><i class="fa-solid fa-file-code"></i><span>Projects</span></a></li>
+            <li><a href="#skills" title="Skills"><i class="fa-solid fa-code"></i><span>Skills</span></a></li>
+            <li><a href="#experience" title="Experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a></li>
+            <li class="divider"></li>
+            <li><a href="https://github.com/JoshOn360Hz" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="mailto:joshimansfield@icloud.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" title="CV/Resume" class="cv-link"><img src="assets/icon/cv.png" alt="CV" class="cv-icon"></a></li>
+            <li class="divider divider-before-all-projects"></li>
+            <li class="all-projects-dock-item"><a href="#" id="openDrawerDock" title=" All Projects"><i class="fa-solid fa-grip"></i><span>Projects</span></a></li>
+        </ul>   
+    </nav>
+    <script src="src/script.js"></script>
+</body>
+</html>
