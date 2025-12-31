@@ -56,16 +56,28 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Mobile-specific background image */
+/* Mobile-specific background image - fixed using pseudo-element for iOS */
 @media (max-width: 768px) {
     body {
+        background: var(--bg);
+        background-attachment: scroll;
+        position: relative;
+    }
+    
+    body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
         background-image: 
             linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
             url('../assets/bg/bg-mobile.png');
-        background-attachment: scroll;
         background-size: cover;
-        background-position: center top;
-        min-height: 100vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -1;
     }
 }
 
