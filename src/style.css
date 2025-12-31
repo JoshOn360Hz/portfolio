@@ -43,7 +43,7 @@ body {
     background: var(--bg);
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-        url('../assets/wall.jpg');
+        url('../assets/bg/bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -54,6 +54,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mobile-specific background image */
+@media (max-width: 768px) {
+    body {
+        background-image: 
+            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+            url('../assets/bg/bg-mobile.png');
+    }
 }
 
 /* Hide scrollbar on mobile */
