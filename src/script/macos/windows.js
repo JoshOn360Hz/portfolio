@@ -156,13 +156,61 @@ function toggleAboutDropdown() {
     }
 }
 
+// Downloads stack controls
+function toggleDownloads() {
+    const stack = document.getElementById('downloads-stack');
+    const downloadsIcon = document.querySelector('[data-app="downloads"]');
+    
+    if (stack.style.display === 'none' || !stack.style.display) {
+        // Show stack temporarily to get dimensions
+        stack.style.display = 'block';
+        stack.style.visibility = 'hidden';
+        
+        // Get stack dimensions and icon position
+        const stackWidth = stack.offsetWidth;
+        const stackHeight = stack.offsetHeight;
+        const iconRect = downloadsIcon.getBoundingClientRect();
+        
+        // Calculate position - center above the icon
+        let left = iconRect.left + (iconRect.width / 2) - (stackWidth / 2);
+        let top = iconRect.top - stackHeight - 24; // 24px gap above icon
+        
+        // Adjust if stack would go off right edge
+        if (left + stackWidth > window.innerWidth - 10) {
+            left = window.innerWidth - stackWidth - 10;
+        }
+        
+        // Adjust if stack would go off left edge
+        if (left < 10) {
+            left = 10;
+        }
+        
+        // Calculate arrow position relative to stack
+        const arrowLeft = iconRect.left + (iconRect.width / 2) - left;
+        stack.style.setProperty('--arrow-left', arrowLeft + 'px');
+        
+        // Position and show stack
+        stack.style.left = left + 'px';
+        stack.style.top = top + 'px';
+        stack.style.visibility = 'visible';
+    } else {
+        stack.style.display = 'none';
+    }
+}
+
 // Close dropdown when clicking outside
 document.addEventListener('click', function(event) {
     const dropdown = document.getElementById('apple-dropdown');
     const appleLogo = document.querySelector('.apple-logo');
+    const downloadsStack = document.getElementById('downloads-stack');
+    const downloadsIcon = document.querySelector('[data-app="downloads"]');
     
     if (dropdown && appleLogo && !appleLogo.contains(event.target)) {
         dropdown.style.display = 'none';
+    }
+    
+    if (downloadsStack && downloadsIcon && !downloadsIcon.contains(event.target) && !downloadsStack.contains(event.target)) {
+        downloadsStack.style.display = 'none';
     }
 });
 

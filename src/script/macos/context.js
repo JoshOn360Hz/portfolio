@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Calculate position - center above the icon
             let left = iconRect.left + (iconRect.width / 2) - (menuWidth / 2);
-            let top = iconRect.top - menuHeight - 8; // 8px gap above icon
+            let top = iconRect.top - menuHeight - 20; // 20px gap above icon
             
             // Adjust if menu would go off right edge
             if (left + menuWidth > window.innerWidth) {
@@ -74,6 +74,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleTerminal();
             } else if (appId === 'experience') {
                 toggleExperience();
+            } else if (appId === 'launchpad') {
+                toggleLaunchpad();
+            } else if (appId === 'settings') {
+                toggleSettings();
             } else if (appId) {
                 openAppDetails(appId);
             }
@@ -96,6 +100,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 closeTerminal();
             } else if (appId === 'experience') {
                 closeExperience();
+            } else if (appId === 'launchpad') {
+                toggleLaunchpad();
+            } else if (appId === 'settings') {
+                closeSettings();
             } else {
                 closeApp();
             }

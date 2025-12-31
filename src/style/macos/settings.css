@@ -1,0 +1,119 @@
+/* Settings Window */
+.settings-window {
+    width: 800px !important;
+    height: 600px !important;
+    background: rgba(246, 246, 246, 0.95) !important;
+    backdrop-filter: blur(60px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(60px) saturate(180%) !important;
+}
+
+.settings-content {
+    display: flex;
+    height: calc(100% - 40px);
+    background: linear-gradient(135deg, rgba(246, 246, 246, 0.95) 0%, rgba(236, 236, 240, 0.95) 100%);
+}
+
+.settings-sidebar {
+    width: 200px;
+    background: rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
+}
+
+.settings-section {
+    padding: 0 12px;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    font-size: 13px;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.settings-item i {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.settings-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.settings-item.active {
+    background: rgba(0, 122, 255, 0.15);
+    color: #007AFF;
+}
+
+.settings-item.active i {
+    color: #007AFF;
+}
+
+.settings-main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.settings-main::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.settings-panel h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.85);
+    margin: 0 0 24px 0;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.wallpaper-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+}
+
+.wallpaper-option {
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    aspect-ratio: 16/10;
+}
+
+.wallpaper-option:hover {
+    transform: scale(1.05);
+}
+
+.wallpaper-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wallpaper-option.selected {
+    box-shadow: 0 0 0 3px #007AFF;
+}
+
+.wallpaper-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    color: white;
+    padding: 20px 12px 8px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}

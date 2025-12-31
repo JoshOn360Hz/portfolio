@@ -27,6 +27,9 @@
     <link rel="stylesheet" href="src/style/macos/context.css">
     <link rel="stylesheet" href="src/style/macos/window.css">
     <link rel="stylesheet" href="src/style/macos/windows.css">
+    <link rel="stylesheet" href="src/style/macos/downloads.css">
+    <link rel="stylesheet" href="src/style/macos/launchpad.css">
+    <link rel="stylesheet" href="src/style/macos/settings.css">
 
 
     <!-- Font Awesome -->
@@ -38,7 +41,21 @@
             <ul>
                 <li class="apple-logo" onclick="toggleAboutDropdown()" style="cursor: pointer;"><i class="fa-brands fa-apple"></i>
                     <div class="apple-dropdown" id="apple-dropdown" style="display: none;">
-                        <div class="dropdown-item" onclick="event.stopPropagation(); toggleAboutWindow(); toggleAboutDropdown();">About This Portfolio</div>
+                        <div class="dropdown-item" onclick="event.stopPropagation(); toggleAboutWindow(); toggleAboutDropdown();"><i class="fa-solid fa-laptop"></i> About This Mac</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item" onclick="event.stopPropagation(); toggleSettings(); toggleAboutDropdown();"><i class="fa-solid fa-gear"></i> System Settings</div>
+                        <div class="dropdown-item" onclick="event.stopPropagation(); toggleAppStore(); toggleAboutDropdown();"><i class="fa-brands fa-app-store"></i> App Store</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item"><i class="fa-regular fa-clock"></i> Recent Items</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item"><i class="fa-regular fa-circle-xmark"></i> Force Quit</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-regular fa-moon"></i> Sleep</div>
+                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-arrow-rotate-right"></i>Restart</div>
+                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-power-off"></i> Shut Down</div>
+                        <div class="dropdown-separator"></div>
+                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-lock"></i> Lock Screen</div>
+                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-regular fa-user"></i> Log Out</div>
                     </div>
                 </li>
                 <li onclick="window.location.href='index.html'" style="cursor: pointer;"> Back to portfolio</li>
@@ -188,11 +205,10 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
             <div class="about-icon">
                 <i class="fa-brands fa-apple"></i>
             </div>
-            <h1>Portfolio UI</h1>
-            <p class="about-version">Alternate Interface</p>
+            <h1>Mac inspired Portfolio UI</h1>
+            <p class="about-version">Version 26.2</p>
             <div class="about-description">
-                <p>This is an alternate UI for my portfolio. It's a vanilla JS windowing system inspired by desktop UX patterns.</p>
-                <p class="about-design">Based on the design of macOS Tahoe</p>
+                <p>This is an alternate UI for my portfolio. It's a vanilla JS windowing system inspired by Mac OS Tahoe.</p>
             </div>
             <div class="about-info">
                 <div class="info-row">
@@ -205,6 +221,41 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Settings Window -->
+    <div id="settings-window" class="window settings-window" style="display: none;">
+        <div class="window-controls" id="settings-drag-handle">
+            <div class="controls-left">
+                <button class="window-btn close" onclick="closeSettings()"></button>
+                <button class="window-btn minimize"></button>
+                <button class="window-btn maximize"></button>
+            </div>
+            <div class="controls-center">
+                <span class="app-title">System Settings</span>
+            </div>
+        </div>
+        <div class="settings-content">
+            <div class="settings-sidebar">
+                <div class="settings-section">
+                    <div class="settings-item active" onclick="showSettingsPanel('wallpaper')">
+                        <i class="fa-solid fa-image"></i>
+                        <span>Wallpaper</span>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-main">
+                <div id="wallpaper-panel" class="settings-panel">
+                    <h2>Wallpaper</h2>
+                    <div class="wallpaper-grid" id="wallpaper-grid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="resize-handle resize-left"></div>
+        <div class="resize-handle resize-right"></div>
+        <div class="resize-handle resize-bottom"></div>
+        <div class="resize-handle resize-corner"></div>
     </div>
 
     <!-- App Store Window -->
@@ -235,7 +286,6 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
                     <p>Discover all my applications and projects</p>
                 </div>
                 <div class="appstore-grid" id="appstore-grid">
-                    <!-- Apps will be dynamically inserted here -->
                 </div>
             </div>
         </div>
@@ -249,6 +299,10 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
         <div class="dock-container">
             <div class="dock-icon" data-tooltip="Finder">
                 <img src="assets/macos/icons/finder.png" alt="Finder">
+            </div>
+            <div class="dock-icon" id="launchpad-icon" data-app="launchpad" data-tooltip="Apps" onclick="toggleLaunchpad()">
+                <img src="assets/macos/icons/apps.png" alt="Launchpad">
+                <div class="dock-indicator"></div>
             </div>
              <div class="dock-icon" id="safari-icon" data-app="safari" data-tooltip="Safari" onclick="toggleSafari()">
                 <img src="assets/macos/icons/safari.png" alt="Safari">
@@ -274,39 +328,39 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
                 <img src="assets/macos/icons/pinboard.png" alt="Pinboard">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="uweai" data-tooltip="UWEAI" onclick="openAppDetails('uweai')">
+            <div class="dock-icon" data-app="uweai" data-tooltip="UWEAI" onclick="openAppDetails('uweai')" style="display: none;">
                 <img src="assets/macos/icons/uweai.png" alt="UWEAI">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="mirror" data-tooltip="Smart Mirror" onclick="openAppDetails('mirror')">
+            <div class="dock-icon" data-app="mirror" data-tooltip="Smart Mirror" onclick="openAppDetails('mirror')" style="display: none;">
                 <img src="assets/macos/icons/mirror.png" alt="Mirror">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="ht" data-tooltip="Horizon Travels" onclick="openAppDetails('ht')">
+            <div class="dock-icon" data-app="ht" data-tooltip="Horizon Travels" onclick="openAppDetails('ht')" style="display: none;">
                 <img src="assets/macos/icons/ht.png" alt="HT">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="tbj" data-tooltip="Tech By Josh" onclick="openAppDetails('tbj')">
+            <div class="dock-icon" data-app="tbj" data-tooltip="Tech By Josh" onclick="openAppDetails('tbj')" style="display: none;">
                 <img src="assets/macos/icons/tbj.png" alt="TBJ">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="cts" data-tooltip="CTS Project" onclick="openAppDetails('cts')">
+            <div class="dock-icon" data-app="cts" data-tooltip="CTS Project" onclick="openAppDetails('cts')" style="display: none;">
                 <img src="assets/macos/icons/CTS.png" alt="CTS">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="r1" data-tooltip="R1 Tweaks" onclick="openAppDetails('r1')">
+            <div class="dock-icon" data-app="r1" data-tooltip="R1 Tweaks" onclick="openAppDetails('r1')" style="display: none;">
                 <img src="assets/macos/icons/r1.png" alt="R1">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="led" data-tooltip="Comms loop" onclick="openAppDetails('led')">
+            <div class="dock-icon" data-app="led" data-tooltip="Comms loop" onclick="openAppDetails('led')" style="display: none;">
                 <img src="assets/macos/icons/led.png" alt="LED">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="gungame" data-tooltip="Gun Game" onclick="openAppDetails('gungame')">
+            <div class="dock-icon" data-app="gungame" data-tooltip="Gun Game" onclick="openAppDetails('gungame')" style="display: none;">
                 <img src="assets/macos/icons/gungame.png" alt="Gun Game">
                 <div class="dock-indicator"></div>
             </div>
-            <div class="dock-icon" data-app="val" data-tooltip="Valorant Randomiser" onclick="openAppDetails('val')">
+            <div class="dock-icon" data-app="val" data-tooltip="Valorant Randomiser" onclick="openAppDetails('val')" style="display: none;">
                 <img src="assets/macos/icons/val.png" alt="Val">
                 <div class="dock-indicator"></div>
             </div>
@@ -321,11 +375,12 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
             <div class="dock-icon" data-tooltip="GitHub" onclick="window.open('https://github.com/JoshOn360Hz', '_blank')">
                 <img src="assets/macos/icons/github.png" alt="GitHub">
             </div>
-            <div class="dock-icon" data-tooltip="Settings">
+            <div class="dock-icon" id="settings-icon" data-app="settings" data-tooltip="Settings" onclick="toggleSettings()">
                 <img src="assets/macos/icons/settings.png" alt="Settings">
+                <div class="dock-indicator"></div>
             </div>
             <div class="dock-separator"></div>
-            <div class="dock-icon" data-app="downloads" data-tooltip="Downloads">
+            <div class="dock-icon" data-app="downloads" data-tooltip="Downloads" onclick="toggleDownloads()">
                 <img src="assets/macos/icons/folder-downloads.png" alt="Downloads">
             </div>
             <div class="dock-icon" data-app="bin" data-tooltip="Bin">
@@ -333,6 +388,35 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
             </div>
         </div>
     </section>
+
+    <!-- Downloads Stack -->
+    <div id="downloads-stack" class="downloads-stack" style="display: none;">
+        <div class="stack-grid">
+            <a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" class="stack-item">
+                <div class="stack-item-icon">
+                    <img src="assets/macos/icons/pdf.png" alt="PDF">
+                </div>
+                <div class="stack-item-name">CV.pdf</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Launchpad -->
+    <div id="launchpad" class="launchpad" style="display: none;">
+        <div class="launchpad-container">
+            <div class="launchpad-header">
+                <div class="launchpad-title">
+                    <i class="fa-brands fa-app-store"></i>
+                    <span>Apps</span>
+                </div>
+                <div class="launchpad-view-toggle">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+            <div class="launchpad-content">
+            </div>
+        </div>
+    </div>
 
     <!-- Context Menu -->
     <div id="context-menu" class="context-menu" style="display: none;">
@@ -498,6 +582,8 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
     <script src="src/script/macos/appstore.js"></script>
     <script src="src/script/macos/dock.js"></script>
     <script src="src/script/macos/context.js"></script>
+    <script src="src/script/macos/launchpad.js"></script>
+    <script src="src/script/macos/settings.js"></script>
     <script src="src/script/macos/init.js"></script>
 </body>
 </html>

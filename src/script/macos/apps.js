@@ -1,6 +1,9 @@
 // App window controls
 let currentApp = null;
 
+// List of apps that are hidden by default (from UWEAI to VAL)
+const hiddenByDefaultApps = ['uweai', 'mirror', 'ht', 'tbj', 'cts', 'r1', 'led', 'gungame', 'val'];
+
 function openAppDetails(appId) {
     const appWindow = document.getElementById('app-window');
     const appIcon = document.querySelector(`[data-app="${appId}"]`);
@@ -15,6 +18,11 @@ function openAppDetails(appId) {
     }
     
     currentApp = appId;
+    
+    // Show dock icon if it was hidden
+    if (appIcon && appIcon.style.display === 'none') {
+        appIcon.style.display = 'flex';
+    }
     
     // Populate app details
     document.querySelector('.app-title').textContent = app.name;
@@ -65,7 +73,13 @@ function closeApp() {
     const appWindow = document.getElementById('app-window');
     if (currentApp) {
         const appIcon = document.querySelector(`[data-app="${currentApp}"]`);
-        if (appIcon) appIcon.classList.remove('open');
+        if (appIcon) {
+            appIcon.classList.remove('open');
+            // Hide icon again if it was originally hidden
+            if (hiddenByDefaultApps.includes(currentApp)) {
+                appIcon.style.display = 'none';
+            }
+        }
     }
     appWindow.style.display = 'none';
     currentApp = null;
