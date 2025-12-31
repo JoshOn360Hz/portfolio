@@ -1,0 +1,122 @@
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.download-button, .download-button-github, .download-button-arduino, .download-button-fortnite {
+    padding: 1rem 1rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.download-button i, 
+.download-button-github i, 
+.download-button-arduino i, 
+.download-button-fortnite i {
+    font-size: 15px;
+}
+
+.download-button {
+    background: var(--indigo);
+    color: var(--text);
+    border: none;
+}
+.download-button-github {
+    background: var(--orange);
+    color: var(--text);
+    border: none;
+}
+.download-button-arduino {
+    background: var(--teal-blue);
+    color: var(--text);
+    border: none;
+}
+
+.download-button-fortnite {
+    background: var(--dark-purple);
+    color: var(--text);
+    border: none;
+}
+
+.download-button:hover,
+.download-button-github:hover,
+.download-button-arduino:hover,
+.download-button-fortnite:hover {
+    transform: scale(1.05);
+}
+.cv-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    background: var(--indigo);
+    color: var(--text);
+    text-decoration: none;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.cv-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+    background: #7069ff;
+}
+
+.cv-button i {
+    font-size: 18px;
+}
+
+.project-filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 10px 20px;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.filter-btn:hover {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.filter-btn.active {
+    background: var(--indigo);
+    color: #ffffff;
+    border-color: var(--indigo);
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
