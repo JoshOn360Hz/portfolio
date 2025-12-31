@@ -62,6 +62,10 @@ body {
         background-image: 
             linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
             url('../assets/bg/bg-mobile.png');
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: center top;
+        min-height: 100vh;
     }
 }
 
