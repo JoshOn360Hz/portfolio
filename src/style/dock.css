@@ -1,9 +1,3 @@
-/* Hide dock navigation when page is in an iframe */
-body:not(.standalone) .dock,
-iframe .dock {
-    display: none !important;
-}
-
 .dock {
     position: fixed;
     bottom: 24px;
