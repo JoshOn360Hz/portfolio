@@ -1,4 +1,3 @@
-// Smooth scroll with active tab highlighting
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.dock a[href^="#"]');
     const sections = document.querySelectorAll('section[id]');

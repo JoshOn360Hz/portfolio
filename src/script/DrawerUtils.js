@@ -1,4 +1,3 @@
-// App Drawer functionality
     const appDrawer = document.getElementById('appDrawer');
     const openDrawerBtn = document.getElementById('openDrawer');
     const openDrawerDockBtn = document.getElementById('openDrawerDock');
