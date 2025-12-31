@@ -2,15 +2,15 @@
 .experience-window {
     width: 900px;
     height: 80%;
-    background: rgba(30, 30, 30, 0.95);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    background: rgba(30, 30, 30, 0.95) !important;
+    backdrop-filter: blur(40px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
 }
 
 .experience-window .window-controls {
-    background: rgba(50, 50, 50, 0.95);
-    backdrop-filter: blur(40px) saturate(180%);
-    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    background: rgba(50, 50, 50, 0.95) !important;
+    backdrop-filter: blur(40px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(40px) saturate(180%) !important;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 

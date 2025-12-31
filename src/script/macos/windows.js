@@ -96,6 +96,76 @@ function closeExperience() {
     experienceIcon.classList.remove('open');
 }
 
+// App Store window controls
+function toggleAppStore() {
+    const appstoreWindow = document.getElementById('appstore-window');
+    const appstoreIcon = document.getElementById('appstore-icon');
+    
+    // If window is already open, just bring to front
+    if (appstoreWindow.style.display === 'block') {
+        bringToFront(appstoreWindow);
+        return;
+    }
+    
+    // Open the window
+    appstoreWindow.style.display = 'block';
+    appstoreIcon.classList.add('open');
+    bringToFront(appstoreWindow);
+    
+    // Bounce animation only when opening
+    appstoreIcon.classList.add('bounce');
+    setTimeout(() => {
+        appstoreIcon.classList.remove('bounce');
+    }, 600);
+}
+
+function closeAppStore() {
+    const appstoreWindow = document.getElementById('appstore-window');
+    const appstoreIcon = document.getElementById('appstore-icon');
+    appstoreWindow.style.display = 'none';
+    appstoreIcon.classList.remove('open');
+}
+
+// About window controls
+function toggleAboutWindow() {
+    const aboutWindow = document.getElementById('about-window');
+    
+    // If window is already open, just bring to front
+    if (aboutWindow.style.display === 'block') {
+        bringToFront(aboutWindow);
+        return;
+    }
+    
+    // Open the window
+    aboutWindow.style.display = 'block';
+    bringToFront(aboutWindow);
+}
+
+function closeAboutWindow() {
+    const aboutWindow = document.getElementById('about-window');
+    aboutWindow.style.display = 'none';
+}
+
+// Apple dropdown controls
+function toggleAboutDropdown() {
+    const dropdown = document.getElementById('apple-dropdown');
+    if (dropdown.style.display === 'none' || !dropdown.style.display) {
+        dropdown.style.display = 'block';
+    } else {
+        dropdown.style.display = 'none';
+    }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('apple-dropdown');
+    const appleLogo = document.querySelector('.apple-logo');
+    
+    if (dropdown && appleLogo && !appleLogo.contains(event.target)) {
+        dropdown.style.display = 'none';
+    }
+});
+
 function loadInSafari(url) {
     const safariWindow = document.getElementById('safari-window');
     const safariIcon = document.getElementById('safari-icon');
@@ -184,6 +254,7 @@ function makeWindowDraggable(windowId, dragHandleId) {
 // Make window resizable
 function makeWindowResizable(windowId) {
     const windowEl = document.getElementById(windowId);
+    const resizeLeft = windowEl.querySelector('.resize-left');
     const resizeRight = windowEl.querySelector('.resize-right');
     const resizeBottom = windowEl.querySelector('.resize-bottom');
     const resizeCorner = windowEl.querySelector('.resize-corner');
@@ -207,12 +278,18 @@ function makeWindowResizable(windowId) {
         startLeft = rect.left;
         startTop = rect.top;
         
+        // Ensure window has absolute positioning before resizing
+        windowEl.style.transform = 'none';
+        windowEl.style.left = startLeft + 'px';
+        windowEl.style.top = startTop + 'px';
+        
         e.preventDefault();
     }
     
-    resizeRight.addEventListener('mousedown', (e) => startResize(e, 'right'));
-    resizeBottom.addEventListener('mousedown', (e) => startResize(e, 'bottom'));
-    resizeCorner.addEventListener('mousedown', (e) => startResize(e, 'corner'));
+    if (resizeLeft) resizeLeft.addEventListener('mousedown', (e) => startResize(e, 'left'));
+    if (resizeRight) resizeRight.addEventListener('mousedown', (e) => startResize(e, 'right'));
+    if (resizeBottom) resizeBottom.addEventListener('mousedown', (e) => startResize(e, 'bottom'));
+    if (resizeCorner) resizeCorner.addEventListener('mousedown', (e) => startResize(e, 'corner'));
     
     document.addEventListener('mousemove', function(e) {
         if (!isResizing) return;
@@ -221,6 +298,12 @@ function makeWindowResizable(windowId) {
         
         const deltaX = e.clientX - startX;
         const deltaY = e.clientY - startY;
+        
+        if (resizeType === 'left') {
+            const newWidth = Math.max(minWidth, startWidth - deltaX);
+            windowEl.style.width = newWidth + 'px';
+            windowEl.style.left = (startLeft + (startWidth - newWidth)) + 'px';
+        }
         
         if (resizeType === 'right' || resizeType === 'corner') {
             const newWidth = Math.max(minWidth, startWidth + deltaX);

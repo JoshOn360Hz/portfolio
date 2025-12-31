@@ -1,0 +1,301 @@
+/* App Store Window Styles */
+.appstore-window {
+    width: 900px;
+    height: 650px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(246, 246, 246, 0.95) !important;
+    backdrop-filter: blur(40px) !important;
+    -webkit-backdrop-filter: blur(40px) !important;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.appstore-content {
+    display: flex;
+    height: calc(100% - 40px);
+    background: #f5f5f7;
+}
+
+/* Sidebar Styles */
+.appstore-sidebar {
+    width: 220px;
+    background: rgba(240, 240, 245, 0.95);
+    border-right: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 20px 0;
+    overflow-y: auto;
+}
+
+.sidebar-section {
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+}
+
+.sidebar-item {
+    padding: 8px 20px;
+    color: rgba(0, 0, 0, 0.75);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.sidebar-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.sidebar-item.active {
+    background: rgba(0, 122, 255, 0.12);
+    color: #007AFF;
+    font-weight: 500;
+}
+
+.sidebar-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 18px;
+    background: #007AFF;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Main Content Area */
+.appstore-main {
+    flex: 1;
+    padding: 0;
+    overflow-y: auto;
+    background: #ffffff;
+}
+
+.appstore-header {
+    padding: 30px 40px 20px;
+    background: #ffffff;
+}
+
+.appstore-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin: 0 0 8px 0;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.appstore-header p {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.56);
+    margin: 0;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* App Grid */
+.appstore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    padding: 0 40px 40px;
+}
+
+/* App Cards */
+.appstore-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.appstore-card:hover {
+    background: #fafafa;
+    border-color: rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.appstore-card-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+.appstore-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.appstore-card-content {
+    position: relative;
+}
+
+.appstore-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.appstore-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.appstore-card-type {
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.appstore-card-description {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.56);
+    line-height: 1.5;
+    margin: 0 0 14px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.appstore-card-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.tech-tag {
+    background: rgba(0, 122, 255, 0.08);
+    color: #007AFF;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.appstore-card-button {
+    background: #007AFF;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.appstore-card-button:hover {
+    background: #0051d5;
+    transform: scale(1.02);
+}
+
+.appstore-card-button:active {
+    transform: scale(0.98);
+}
+
+.appstore-card-button i {
+    font-size: 11px;
+}
+
+/* No apps message */
+.no-apps {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+/* Scrollbar Styling */
+.appstore-main::-webkit-scrollbar,
+.appstore-sidebar::-webkit-scrollbar {
+   display: none;
+}
+
+/* Scrollbar Styling */
+.appstore-main::-webkit-scrollbar,
+.appstore-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.appstore-main::-webkit-scrollbar-track,
+.appstore-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.appstore-main::-webkit-scrollbar-thumb,
+.appstore-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+.appstore-main::-webkit-scrollbar-thumb:hover,
+.appstore-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .appstore-content {
+        flex-direction: column;
+    }
+    
+    .appstore-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 0;
+    }
+    
+    .sidebar-section {
+        margin-bottom: 0;
+    }
+    
+    .sidebar-section h3 {
+        display: none;
+    }
+    
+    .sidebar-item {
+        display: inline-block;
+        padding: 8px 15px;
+        margin: 0 5px;
+    }
+}

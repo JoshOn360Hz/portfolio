@@ -111,6 +111,14 @@
     z-index: 10;
 }
 
+.resize-left {
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 100%;
+    cursor: ew-resize;
+}
+
 .resize-right {
     top: 0;
     right: 0;
@@ -159,7 +167,7 @@
     background: rgba(246, 246, 246, 0.75);
     backdrop-filter: blur(40px) saturate(180%);
     -webkit-backdrop-filter: blur(40px) saturate(180%);
-    cursor: move;
+    cursor: default;
     user-select: none;
     gap: 12px;
 }

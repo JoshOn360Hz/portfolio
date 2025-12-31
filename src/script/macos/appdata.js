@@ -2,7 +2,7 @@
 const appData = {
     cumulus: {
         name: 'Cumulus',
-        icon: 'assets/term/icons/cumulus.png',
+        icon: 'assets/macos/icons/cumulus.png',
         description: 'A simple, Vision OS inspired weather app available on iOS, iPadOS and macOS. Beautiful design meets functionality.',
         tech: ['Swift', 'SwiftUI', 'WeatherKit'],
         links: [
@@ -13,7 +13,7 @@ const appData = {
     },
     pinboard: {
         name: 'PinBoard',
-        icon: 'assets/term/icons/pinboard.png',
+        icon: 'assets/macos/icons/pinboard.png',
         description: 'A notes and reminders app that uses live activities, available on iOS and iPadOS. Stay organized with style.',
         tech: ['Swift', 'Live Activities', 'CoreData'],
         links: [
@@ -24,7 +24,7 @@ const appData = {
     },
     tailtag: {
         name: 'TailTag',
-        icon: 'assets/term/icons/tailtag.png',
+        icon: 'assets/macos/icons/tailtag.png',
         description: 'A planespotter app that helps you track aircraft you have seen. Perfect for aviation enthusiasts.',
         tech: ['Swift', 'SwiftUI', 'CoreData'],
         links: [
@@ -35,7 +35,7 @@ const appData = {
     },
     flipcards: {
         name: 'FlipCards',
-        icon: 'assets/term/icons/flipcards.png',
+        icon: 'assets/macos/icons/flipcards.png',
         description: 'A flashcard app designed to help you study and memorize information efficiently. Perfect for students and lifelong learners.',
         tech: ['Swift', 'SwiftUI', 'CoreData'],
         links: [
@@ -46,7 +46,7 @@ const appData = {
     },
     ht: {
         name: 'Horizon Travels',
-        icon: 'assets/term/icons/ht.png',
+        icon: 'assets/macos/icons/ht.png',
         description: 'A web-based flight booking system built with Python (Flask), CSS, JavaScript, HTML and SQL.',
         tech: ['Python', 'Flask', 'SQL'],
         links: [
@@ -55,7 +55,7 @@ const appData = {
     },
     uweai: {
         name: 'UWE AI',
-        icon: 'assets/term/icons/uweai.png',
+        icon: 'assets/macos/icons/uweai.png',
         description: 'Website for the UWE AI Autonomous Racing Society, showcasing autonomous racing technology and society activities.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         links: [
@@ -65,7 +65,7 @@ const appData = {
     },
     tbj: {
         name: 'Tech By Josh',
-        icon: 'assets/term/icons/tbj.png',
+        icon: 'assets/macos/icons/tbj.png',
         description: 'The website for my tech support business built with JavaScript, CSS and HTML.',
         tech: ['HTML', 'CSS', 'JavaScript'],
         links: [
@@ -74,7 +74,7 @@ const appData = {
     },
     mirror: {
         name: 'Smart Mirror Web',
-        icon: 'assets/term/icons/mirror.png',
+        icon: 'assets/macos/icons/mirror.png',
         description: 'Web-based mirror OS displaying date, time, weather and calendar for smart mirror integration.',
         tech: ['Flask', 'API', 'IOT'],
         links: [
@@ -83,7 +83,7 @@ const appData = {
     },
     cts: {
         name: 'Keypad Project',
-        icon: 'assets/term/icons/CTS.png',
+        icon: 'assets/macos/icons/CTS.png',
         description: 'Escape room puzzle project featuring Arduino-based keycard and wiring system.',
         tech: ['Arduino', 'C++', 'Wiring'],
         links: [
@@ -93,7 +93,7 @@ const appData = {
     },
     r1: {
         name: 'R1 Modification',
-        icon: 'assets/term/icons/r1.png',
+        icon: 'assets/macos/icons/r1.png',
         description: 'Custom modifications to Rabbit R1 Android experience, adding stock features and customizations.',
         tech: ['Android', 'Custom ROM', 'Hardware'],
         links: [
@@ -102,7 +102,7 @@ const appData = {
     },
     led: {
         name: 'Comms Loop',
-        icon: 'assets/term/icons/led.png',
+        icon: 'assets/macos/icons/led.png',
         description: 'Using an Arduino, photoresistor and an LED to transmit bytes and decode them into outputs.',
         tech: ['Arduino', 'Electronics', 'Hardware'],
         links: [
@@ -112,7 +112,7 @@ const appData = {
     },
     gungame: {
         name: 'Gun Game',
-        icon: 'assets/term/icons/gungame.png',
+        icon: 'assets/macos/icons/gungame.png',
         description: 'Verse and UEFN Gun Game map with custom POIs created for a streamer friend.',
         tech: ['UEFN', 'Verse', 'Gaming'],
         links: [
@@ -121,7 +121,7 @@ const appData = {
     },
     val: {
         name: 'Val Randomiser',
-        icon: 'assets/term/icons/val.png',
+        icon: 'assets/macos/icons/val.png',
         description: 'C application with nice UI to randomly select Valorant agents, also available as web WASM app.',
         tech: ['C', 'Gaming', 'WASM'],
         links: [
@@ -130,3 +130,4 @@ const appData = {
         ]
     }
 };
+
