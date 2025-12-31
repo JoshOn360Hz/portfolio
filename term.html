@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favico/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favico/site.webmanifest" />
+
+    <title>Josh Mansfield</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/style/base.css">
+    <link rel="stylesheet" href="src/style/colors.css">
+    <link rel="stylesheet" href="src/style/buttons.css">
+    <link rel="stylesheet" href="src/style/experience.css">
+    <link rel="stylesheet" href="src/style/term/term.css">
+    <link rel="stylesheet" href="src/style/term/bar.css">
+    <link rel="stylesheet" href="src/style/term/dock.css">
+    <link rel="stylesheet" href="src/style/term/apps.css">
+    <link rel="stylesheet" href="src/style/term/context.css">
+    <link rel="stylesheet" href="src/style/term/windows.css">
+
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e2cf8702e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="menubar">
+        <section id="menubar-left">
+            <ul>
+                <li class="apple-logo"><i class="fa-brands fa-apple"></i></li>
+                <li onclick="window.location.href='index.html'" style="cursor: pointer;"> Back to portfolio</li>
+                <li>File</li>
+                <li>Edit</li>
+                <li>View</li>
+                <li>Go</li>
+                <li>Window</li>
+                <li>Help</li>
+                
+            </ul>
+        </section>
+        <section id="menubar-right">
+            <ul>
+                <li><i class="fa-solid fa-battery-three-quarters"></i></li>
+                <li><i class="fa-solid fa-wifi"></i></li>
+                <li><i class="fa-regular fa-user"></i></li>
+                <li class="datetime"><span id="datetime">Wed Dec 31 6:45 PM</span></li>
+            </ul>
+        </section>
+    </section>
+
+    <!-- Safari Window -->
+    <div id="safari-window" class="window" style="display: none;">
+        <div class="window-controls" id="window-drag-handle">
+            <div class="controls-left">
+                <button class="window-btn close" onclick="closeSafari()"></button>
+                <button class="window-btn minimize"></button>
+                <button class="window-btn maximize"></button>
+            </div>
+            <div class="toolbar-left">
+                <button class="toolbar-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="toolbar-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="controls-center">
+                <div class="address-bar">
+                    <i class="fa-solid fa-lock"></i>
+                    <span>joshmansfielddevelopment.com</span>
+                </div>
+            </div>
+            <div class="toolbar-right">
+                <button class="toolbar-btn"><i class="fa-solid fa-share-from-square"></i></button>
+                <button class="toolbar-btn"><i class="fa-solid fa-plus"></i></button>
+                <button class="toolbar-btn"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+        <div class="window-content">
+            <iframe src="index.html" frameborder="0"></iframe>
+        </div>
+        <div class="resize-handle resize-right"></div>
+        <div class="resize-handle resize-bottom"></div>
+        <div class="resize-handle resize-corner"></div>
+    </div>
+
+    <!-- Terminal Window -->
+    <div id="terminal-window" class="window terminal-window" style="display: block;">
+        <div class="window-controls terminal-controls" id="terminal-drag-handle">
+            <div class="controls-left">
+                <button class="window-btn close" onclick="closeTerminal()"></button>
+                <button class="window-btn minimize"></button>
+                <button class="window-btn maximize"></button>
+            </div>
+            <div class="terminal-title">zsh</div>
+        </div>
+        <div class="terminal-content">
+            <div class="terminal-output">
+                <pre>Last login: Tue Dec 31 15:30:45 on console
+joshmansfield@Joshs-MacBook ~ % neofetch
+
+                    'c.          joshmansfield@Joshs-MacBook
+                 ,xNMM.          ------------------------------
+               .OMMMMo           OS: macOS 14.2.1 23C71 arm64
+               OMMM0,            Host: MacBook Pro (14-inch, 2025)
+     .;loddo:' loolloddol;.      Kernel: 23.2.0
+   cKMMMMMMMMMMNWMMMMMMMMMM0:    Uptime: 3 days, 7 hours, 42 mins
+ .KMMMMMMMMMMMMMMMMMMMMMMMWd.    Packages: 247 (brew)
+ XMMMMMMMMMMMMMMMMMMMMMMMX.      Shell: zsh 5.9
+;MMMMMMMMMMMMMMMMMMMMMMMM:       Resolution: 3456 × 2234
+:MMMMMMMMMMMMMMMMMMMMMMMM:       DE: Aqua
+.MMMMMMMMMMMMMMMMMMMMMMMMX.      WM: Rectangle
+ kMMMMMMMMMMMMMMMMMMMMMMMMWd.    Terminal: zsh
+ .XMMMMMMMMMMMMMMMMMMMMMMMMMMk   CPU: Apple M5
+  .XMMMMMMMMMMMMMMMMMMMMMMMMK.   GPU: Apple M5
+    kMMMMMMMMMMMMMMMMMMMMMMd     Memory: 8192MiB / 131072MiB
+     ;KMMMMMMMWXXWMMMMMMMk.
+       .cooc,.    .,coo:.
+
+joshmansfield@Joshs-MacBook ~ % cat intro.txt
+
+Hi, I'm Josh Mansfield, a Developer & Designer
+
+I build innovative applications across multiple platforms:
+  • iOS Apps - SwiftUI, UIKit, App Store releases
+  • Web Apps - React, Vanilla, modern web technologies  
+  • Hardware Projects - IoT, embedded systems, automation
+
+Open the apps in the dock to discover my projects and experience.
+Click around to explore my portfolio
+
+joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
+            </div>
+        </div>
+        <div class="resize-handle resize-right"></div>
+        <div class="resize-handle resize-bottom"></div>
+        <div class="resize-handle resize-corner"></div>
+    </div>
+
+    <!-- App Detail Window -->
+    <div id="app-window" class="window app-window" style="display: none;">
+        <div class="window-controls" id="app-drag-handle">
+            <div class="controls-left">
+                <button class="window-btn close" onclick="closeApp()"></button>
+                <button class="window-btn minimize"></button>
+                <button class="window-btn maximize"></button>
+            </div>
+            <div class="app-title"></div>
+        </div>
+        <div class="app-content">
+            <div class="app-header">
+                <img src="" alt="" class="app-icon-large">
+                <div class="app-info">
+                    <h2 class="app-name"></h2>
+                    <p class="app-description"></p>
+                    <div class="app-tech-badges"></div>
+                </div>
+            </div>
+            <div class="app-buttons"></div>
+        </div>
+        <div class="resize-handle resize-right"></div>
+        <div class="resize-handle resize-bottom"></div>
+        <div class="resize-handle resize-corner"></div>
+    </div>
+
+    <section id="dock">
+        <div class="dock-container">
+            <div class="dock-icon" data-tooltip="Finder">
+                <img src="assets/term/icons/finder.png" alt="Finder">
+            </div>
+             <div class="dock-icon" id="safari-icon" data-app="safari" data-tooltip="Safari" onclick="toggleSafari()">
+                <img src="assets/term/icons/safari.png" alt="Safari">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="cumulus" data-tooltip="Cumulus" onclick="openAppDetails('cumulus')">
+                <img src="assets/term/icons/cumulus.png" alt="Cumulus">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="flipcards" data-tooltip="FlipCards" onclick="openAppDetails('flipcards')">
+                <img src="assets/term/icons/flipcards.png" alt="Flipcards">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="tailtag" data-tooltip="TailTag" onclick="openAppDetails('tailtag')">
+                <img src="assets/term/icons/tailtag.png" alt="TailTag">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="pinboard" data-tooltip="PinBoard" onclick="openAppDetails('pinboard')">
+                <img src="assets/term/icons/pinboard.png" alt="Pinboard">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="uweai" data-tooltip="UWEAI" onclick="openAppDetails('uweai')">
+                <img src="assets/term/icons/uweai.png" alt="UWEAI">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="mirror" data-tooltip="Smart Mirror" onclick="openAppDetails('mirror')">
+                <img src="assets/term/icons/mirror.png" alt="Mirror">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="ht" data-tooltip="Horizon Travels" onclick="openAppDetails('ht')">
+                <img src="assets/term/icons/ht.png" alt="HT">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="tbj" data-tooltip="Tech By Josh" onclick="openAppDetails('tbj')">
+                <img src="assets/term/icons/tbj.png" alt="TBJ">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="cts" data-tooltip="CTS Project" onclick="openAppDetails('cts')">
+                <img src="assets/term/icons/CTS.png" alt="CTS">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="r1" data-tooltip="R1 Tweaks" onclick="openAppDetails('r1')">
+                <img src="assets/term/icons/r1.png" alt="R1">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="led" data-tooltip="Comms loop" onclick="openAppDetails('led')">
+                <img src="assets/term/icons/led.png" alt="LED">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="gungame" data-tooltip="Gun Game" onclick="openAppDetails('gungame')">
+                <img src="assets/term/icons/gungame.png" alt="Gun Game">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-app="val" data-tooltip="Valorant Randomiser" onclick="openAppDetails('val')">
+                <img src="assets/term/icons/val.png" alt="Val">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon open" id="terminal-icon" data-app="terminal" data-tooltip="Terminal" onclick="toggleTerminal()">
+                <img src="assets/term/icons/terminal.png" alt="Terminal">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" id="experience-icon" data-app="experience" data-tooltip="Experience" onclick="toggleExperience()">
+                <img src="assets/term/icons/experience.png" alt="Experience">
+                <div class="dock-indicator"></div>
+            </div>
+            <div class="dock-icon" data-tooltip="GitHub" onclick="window.open('https://github.com/JoshOn360Hz', '_blank')">
+                <img src="assets/term/icons/github.png" alt="GitHub">
+            </div>
+            <div class="dock-icon" data-tooltip="Settings">
+                <img src="assets/term/icons/settings.png" alt="Settings">
+            </div>
+            <div class="dock-separator"></div>
+            <div class="dock-icon" data-app="downloads" data-tooltip="Downloads">
+                <img src="assets/term/icons/folder-downloads.png" alt="Downloads">
+            </div>
+            <div class="dock-icon" data-app="bin" data-tooltip="Bin">
+                <img src="assets/term/icons/bin.png" alt="Trash">
+            </div>
+        </div>
+    </section>
+
+    <!-- Context Menu -->
+    <div id="context-menu" class="context-menu" style="display: none;">
+        <div class="context-menu-item" id="context-open">Open</div>
+        <div class="context-menu-item disabled">Options</div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item" id="context-quit">Quit</div>
+    </div>
+    <!-- Experience Window -->
+    <div id="experience-window" class="window experience-window" style="display: none;">
+        <div class="window-controls" id="experience-drag-handle">
+            <div class="controls-left">
+                <button class="window-btn close" onclick="closeExperience()"></button>
+                <button class="window-btn minimize"></button>
+                <button class="window-btn maximize"></button>
+            </div>
+            <div class="controls-center">
+                <span class="app-title">Experience</span>
+            </div>
+        </div>
+        <div class="experience-content">
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Junior Developer</h3>
+                            <p class="company">Pimento | <a href="https://getpimento.com" target="_blank">getpimento.com</a></p>
+                        </div>
+                        <span class="date">August 2025 – Current</span>
+                    </div>
+                    <p class="experience-description">
+                        As the sole frontend engineer, I rebuilt the warehouse app with a new TabView layout, card components, and improved flows, while also modernising the entire React web dashboard, updating every page and migrating the UI to ShadCN and building shared custom components. I also manage App Store Connect for app releases and testing.
+                    </p>
+                    <p class="experience-note">
+                        All prototypes were created in Photoshop and implemented using React and React Native with a shared component system.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">React</span>
+                        <span class="badge">Expo</span>
+                        <span class="badge">TypeScript</span>
+                        <span class="badge">React Native</span>
+                        <span class="badge">Tailwind</span>
+                        <span class="badge">Lucide</span>
+                        <span class="badge">App Store Connect</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Golang Internship</h3>
+                            <p class="company">University of the West of England</p>
+                        </div>
+                        <span class="date">July 2025 – Sept 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Mentoring students in Golang and software development, creating teaching materials, and developing tools for the Principles of Programming module.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">Golang</span>
+                        <span class="badge">Teaching</span>
+                        <span class="badge">Mentoring</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-brands fa-apple"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>iOS App Development</h3>
+                            <p class="company">Self-Employed | <a href="https://appsbyjosh.com" target="_blank">Appsbyjosh.com</a></p>
+                        </div>
+                        <span class="date">Jan 2024 – Current</span>
+                    </div>
+                    <p class="experience-description">
+                        Designing, developing, and publishing iOS apps using SwiftUI, WidgetKit, Combine, WeatherKit, Core Data, and Activity Kit. Managing full-stack development, testing, and deployment via the App Store and TestFlight.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">WidgetKit</span>
+                        <span class="badge">Core Data</span>
+                        <span class="badge">Activity Kit</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Web Development</h3>
+                            <p class="company">Self-Employed</p>
+                        </div>
+                        <span class="date">Jan 2020 – Aug 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Design and build responsive, mobile-first websites with a focus on user experience, accessibility, and SEO best practices. Providing end-to-end solutions for bespoke client projects, ensuring compliance with modern web standards.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">HTML</span>
+                        <span class="badge">CSS</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">SEO</span>
+                        <span class="badge">Responsive Design</span>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <div class="experience-header">
+                        <div>
+                            <h3>Technical Support</h3>
+                            <p class="company">Self-Employed | <a href="https://techbyjosh.dev" target="_blank">Techbyjosh.dev</a></p>
+                        </div>
+                        <span class="date">Jan 2019 – Aug 2025</span>
+                    </div>
+                    <p class="experience-description">
+                        Providing technical consultation and affordable solutions for client issues, including hardware/software repairs, diagnostics, and network setups. Installing and maintaining systems such as cameras, servers, and access points.
+                    </p>
+                    <div class="tech-badges">
+                        <span class="badge">Hardware Repair</span>
+                        <span class="badge">Network Setup</span>
+                        <span class="badge">Diagnostics</span>
+                        <span class="badge">System Maintenance</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-button-container">
+                <a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" class="cv-button">
+                    <i class="fa-solid fa-file-pdf"></i> View CV
+                </a>
+            </div>
+        </div>
+        <div class="resize-handle resize-right"></div>
+        <div class="resize-handle resize-bottom"></div>
+        <div class="resize-handle resize-corner"></div>
+    </div>
+    <!-- Bin Context Menu -->
+    <div id="bin-context-menu" class="context-menu" style="display: none;">
+        <div class="context-menu-item disabled" id="bin-open">Open</div>
+        <div class="context-menu-separator"></div>
+        <div class="context-menu-item disabled" id="bin-empty">Empty Bin</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="src/script/term/datetime.js"></script>
+    <script src="src/script/term/appdata.js"></script>
+    <script src="src/script/term/windows.js"></script>
+    <script src="src/script/term/apps.js"></script>
+    <script src="src/script/term/dock.js"></script>
+    <script src="src/script/term/context.js"></script>
+    <script src="src/script/term/init.js"></script>
+</body>
+</html>

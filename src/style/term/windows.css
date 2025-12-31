@@ -1,0 +1,107 @@
+/* Experience Window */
+.experience-window {
+    width: 900px;
+    height: 80%;
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+}
+
+.experience-window .window-controls {
+    background: rgba(50, 50, 50, 0.95);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.experience-window .app-title {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.experience-content {
+    width: 100%;
+    height: calc(100% - 54px);
+    background: rgba(30, 30, 30, 0.95);
+    padding: 40px;
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.experience-content::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Override timeline for dark mode */
+.experience-window .experience-timeline {
+    padding-left: 68px;
+}
+
+.experience-window .experience-timeline::before {
+    left: 24px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.experience-window .timeline-icon {
+    left: -68px;
+    background: #007aff;
+    border-color: rgba(30, 30, 30, 0.95);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.experience-window .experience-card {
+    background: rgba(50, 50, 50, 0.8);
+    border-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.experience-window .experience-card h3 {
+    color: #ffffff;
+}
+
+.experience-window .company,
+.experience-window .date,
+.experience-window .experience-description,
+.experience-window .experience-note {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.experience-window .company a {
+    color: #4a9eff;
+}
+
+.experience-window .company a:hover {
+    color: #6bb0ff;
+}
+
+.experience-window .tech-badges .badge {
+    background: rgba(0, 122, 255, 0.2);
+    color: #4a9eff;
+    border: 1px solid rgba(0, 122, 255, 0.3);
+}
+
+.experience-window .cv-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.experience-window .cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #007aff;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.experience-window .cv-button:hover {
+    background: #0051d5;
+    transform: translateY(-1px);
+}
