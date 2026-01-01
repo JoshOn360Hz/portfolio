@@ -30,12 +30,49 @@
     <link rel="stylesheet" href="src/style/macos/downloads.css">
     <link rel="stylesheet" href="src/style/macos/launchpad.css">
     <link rel="stylesheet" href="src/style/macos/settings.css">
+    <link rel="stylesheet" href="src/style/macos/boot.css">
 
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e2cf8702e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="apple-logo-boot">
+                <i class="fa-brands fa-apple"></i>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar">
+                    <div class="loading-bar-fill" id="loading-bar-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Screen -->
+    <div id="login-screen" class="login-screen">
+        <div class="login-datetime">
+            <div class="login-date">Wed Sep 17</div>
+            <div class="login-time">4:38</div>
+        </div>
+        <div class="login-content">
+            <div class="login-user">
+                <div class="login-avatar">
+                    <img src="assets/macos/icons/user-avatar.png" alt="User" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fa-regular fa-user\'></i>';">
+                </div>
+                <div class="login-name">Josh Mansfield</div>
+                <div class="login-input-container">
+                    <input type="password" id="login-input" placeholder="Touch ID or Enter Password" autocomplete="off">
+                    <div class="login-hint">Press Enter to continue</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
     <section id="menubar">
         <section id="menubar-left">
             <ul>
@@ -54,8 +91,8 @@
                         <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-arrow-rotate-right"></i>Restart</div>
                         <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-power-off"></i> Shut Down</div>
                         <div class="dropdown-separator"></div>
-                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-solid fa-lock"></i> Lock Screen</div>
-                        <div class="dropdown-item" onclick="window.location.href='index.html'"><i class="fa-regular fa-user"></i> Log Out</div>
+                        <div class="dropdown-item" onclick="event.stopPropagation(); lockScreen(); toggleAboutDropdown();"><i class="fa-solid fa-lock"></i> Lock Screen</div>
+                        <div class="dropdown-item" onclick="event.stopPropagation(); lockScreen(); toggleAboutDropdown();"><i class="fa-regular fa-user"></i> Log Out</div>
                     </div>
                 </li>
                 <li onclick="window.location.href='index.html'" style="cursor: pointer;"> Back to portfolio</li>
@@ -573,8 +610,11 @@ joshmansfield@Joshs-MacBook ~ % <span class="cursor">█</span></pre>
         <div class="context-menu-separator"></div>
         <div class="context-menu-item disabled" id="bin-empty">Empty Bin</div>
     </div>
+    </div>
+    <!-- End Main Content -->
 
     <!-- Scripts -->
+    <script src="src/script/macos/boot.js"></script>
     <script src="src/script/macos/datetime.js"></script>
     <script src="src/script/macos/appdata.js"></script>
     <script src="src/script/macos/windows.js"></script>
