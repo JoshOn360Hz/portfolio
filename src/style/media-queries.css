@@ -46,6 +46,11 @@
         display: none;
     }
     
+    /* Hide Alternative UI button on mobile */
+    .alternative-ui-button {
+        display: none;
+    }
+    
     /* Hide macOS link on mobile */
     .macos-link {
         display: none;
@@ -228,8 +233,3 @@
         font-size: 16px;
     }
 }
-     @media (max-width: 768px) {
-            .easter-egg-btn {
-                display: none;
-            }
-        }
