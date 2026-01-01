@@ -45,6 +45,11 @@
     .divider-before-all-projects {
         display: none;
     }
+    
+    /* Hide macOS link on mobile */
+    .macos-link {
+        display: none;
+    }
 }
 
 /* Show app drawer button only on desktop */

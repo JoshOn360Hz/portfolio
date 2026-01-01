@@ -343,7 +343,7 @@
                         <span class="badge">WASM</span>
                     </div>
                     <div class="project-buttons">
-                        <button class="download-button" onclick="window.open('https://joshon360hz.github.io/ValRandomiser-web/', '_blank')">
+                        <button class="download-button" onclick="window.open('https://app.arduino.cc/sketches/1edd2233-3956-43df-a079-eebec21027b4?view-mode=preview', '_blank')">
                             <i class="fas fa-code"></i> View WASM App
                         </button>
                         <button class="download-button-github" onclick="window.open('https://joshon360hz.github.io/ValRandomiser-web/', '_blank')">
@@ -624,61 +624,11 @@
             <li><a href="https://github.com/JoshOn360Hz" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a></li>
             <li><a href="mailto:joshimansfield@icloud.com" target="_blank" title="Email"><i class="fa-solid fa-envelope"></i></a></li>
             <li><a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" title="CV/Resume" class="cv-link"><img src="assets/icon/cv.png" alt="CV" class="cv-icon"></a></li>
+            <li class="macos-link"><a href="term.html" title="macOS Tahoe styled Portfolio"><i class="fa-brands fa-apple"></i></a></li>
             <li class="divider divider-before-all-projects"></li>
             <li class="all-projects-dock-item"><a href="#" id="openDrawerDock" title=" All Projects"><i class="fa-solid fa-grip"></i><span>Projects</span></a></li>
         </ul>   
     </nav>
-    
-    <!-- Easter Egg Button -->
-    <button class="easter-egg-btn" onclick="document.getElementById('easterEggModal').classList.add('show')" aria-label="Easter Egg">
-        <i class="fa-solid fa-star"></i>
-    </button>
-    
-    <!-- Easter Egg Modal -->
-    <div id="easterEggModal" class="easter-egg-modal" onclick="if(event.target === this) this.classList.remove('show')">
-        <div class="easter-egg-content">
-            <div class="easter-egg-icon">
-                <i class="fa-brands fa-apple"></i>
-            </div>
-            <h2>Hidden Feature</h2>
-            <p>Looking for something special?<br>Try typing <strong>/macos</strong> anywhere on the page</p>
-            <button class="easter-egg-close" onclick="document.getElementById('easterEggModal').classList.remove('show')">Got it!</button>
-        </div>
-    </div>
-    
-    <script>
-        // Console hint
-        console.log('psss... type /macos on the home page for a surprise');
-        
-        // Easter egg: typing /macos redirects to term.html
-        let typedSequence = '';
-        const secretCode = '/macos';
-        
-        document.addEventListener('keydown', (e) => {
-            // Ignore if typing in an input field
-            if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-                return;
-            }
-            
-            typedSequence += e.key.toLowerCase();
-            
-            // Keep only the last characters needed to match the code
-            if (typedSequence.length > secretCode.length) {
-                typedSequence = typedSequence.slice(-secretCode.length);
-            }
-            
-            // Check if the sequence matches
-            if (typedSequence === secretCode) {
-                window.location.href = 'term.html';
-            }
-            
-            // Clear sequence after 2 seconds of inactivity
-            clearTimeout(window.sequenceTimeout);
-            window.sequenceTimeout = setTimeout(() => {
-                typedSequence = '';
-            }, 2000);
-        });
-    </script>
     <script src="src/script/DrawerUtils.js"></script>
     <script src="src/script/Navigation.js"></script>    
     <script src="src/script/Search.js"></script>
