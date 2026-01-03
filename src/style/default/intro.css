@@ -69,6 +69,13 @@
     opacity: 0.8;
 }
 
+.intro-card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
 .intro-icon {
     width: 56px;
     height: 56px;
@@ -77,13 +84,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    flex-shrink: 0;
     box-shadow: 0 4px 16px rgba(88, 86, 214, 0.2);
 }
 
 .intro-icon i {
     font-size: 24px;
     color: #ffffff;
+}
+
+.intro-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    letter-spacing: -0.3px;
 }
 
 .intro-card p {
