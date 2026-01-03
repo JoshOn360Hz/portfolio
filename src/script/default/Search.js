@@ -1,4 +1,3 @@
- // Search functionality
     if (drawerSearch) {
         drawerSearch.addEventListener('input', function() {
             const searchTerm = this.value.toLowerCase();
