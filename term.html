@@ -31,12 +31,28 @@
     <link rel="stylesheet" href="src/style/macos/launchpad.css">
     <link rel="stylesheet" href="src/style/macos/settings.css">
     <link rel="stylesheet" href="src/style/macos/boot.css">
+    <link rel="stylesheet" href="src/style/macos/mobile-warning.css">
 
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/e2cf8702e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Mobile Warning Screen -->
+    <div id="mobile-warning" class="mobile-warning">
+        <div class="mobile-warning-content">
+            <div class="mobile-warning-icon">
+                <i class="fa-solid fa-mobile-screen"></i>
+            </div>
+            <h2>Desktop Experience Only</h2>
+            <p>Sorry, this page is only available on tablets, laptops and desktop computers.</p>
+            <a onclick="window.location.href='https://joshmansfielddevelopment.com'" class="mobile-warning-button">
+                <i class="fa-solid fa-arrow-left"></i>
+                Go to Portfolio
+            </a>
+        </div>
+    </div>
+
     <!-- Loading Screen -->
     <div id="loading-screen" class="loading-screen">
         <div class="loading-content">
