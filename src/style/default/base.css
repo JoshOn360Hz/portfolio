@@ -87,7 +87,14 @@ main {
     white-space: nowrap;
 }
 
-
-
-
-
+.noscript-warning{
+    background-color: var(--red);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    gap: 10px;
+}
