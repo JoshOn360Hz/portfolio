@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="src/style/default/buttons.css">
     <link rel="stylesheet" href="src/style/default/dock.css">
     <link rel="stylesheet" href="src/style/default/drawer.css">
+    <link rel="stylesheet" href="src/style/default/mobile-nav.css">
     <link rel="stylesheet" href="src/style/default/intro.css">
     <link rel="stylesheet" href="src/style/default/projects.css">
     <link rel="stylesheet" href="src/style/default/skills.css">
@@ -626,6 +627,58 @@
         </section>
     </main>
     
+    <!-- Mobile Hamburger Menu -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button class="close-drawer" id="closeDrawer" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav-links">
+            <a href="#home" class="mobile-nav-link">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+            <a href="#projects" class="mobile-nav-link">
+                <i class="fa-solid fa-file-code"></i>
+                <span>Projects</span>
+            </a>
+            <a href="#experience" class="mobile-nav-link">
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Experience</span>
+            </a>
+            <a href="#skills" class="mobile-nav-link">
+                <i class="fa-solid fa-code"></i>
+                <span>Skills</span>
+            </a>
+            <div class="mobile-nav-divider"></div>
+            <a href="https://github.com/JoshOn360Hz" target="_blank" class="mobile-nav-link">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/josh-mansfield-094a051a0" target="_blank" class="mobile-nav-link">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:joshimansfield@icloud.com" class="mobile-nav-link">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+            <a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" class="mobile-nav-link">
+                <img src="assets/icon/cv.png" alt="CV" class="mobile-cv-icon">
+                <span>CV</span>
+            </a>
+        </nav>
+    </div>
+    
     <nav class="dock">
         <ul>
             <li><a href="#home" title="Home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
@@ -644,6 +697,7 @@
     <script src="src/script/default/DrawerUtils.js"></script>
     <script src="src/script/default/Navigation.js"></script>    
     <script src="src/script/default/Search.js"></script>
+    <script src="src/script/default/MobileMenu.js"></script>
 
 </body>
 </html>

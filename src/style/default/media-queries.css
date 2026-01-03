@@ -38,6 +38,10 @@
 
 /* Hide app drawer button on mobile, show on desktop */
 @media (max-width: 768px) {
+    .dock {
+        display: none;
+    }
+    
     .all-projects-dock-item {
         display: none;
     }
