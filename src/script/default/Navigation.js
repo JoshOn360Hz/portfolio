@@ -99,15 +99,25 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateActiveTab() {
         let currentSection = '';
         const scrollPosition = window.scrollY + 200;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
         
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                currentSection = section.getAttribute('id');
-            }
-        });
+        // Check if we're at the bottom of the page
+        if (window.scrollY + windowHeight >= documentHeight - 50) {
+            // If at bottom, set to the last section (skills)
+            const lastSection = sections[sections.length - 1];
+            currentSection = lastSection.getAttribute('id');
+        } else {
+            // Normal scroll detection
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+        }
         
         navLinks.forEach(link => {
             // Skip the all projects link
