@@ -46,9 +46,9 @@
 .mobile-nav-drawer {
     position: fixed;
     top: 0;
+    bottom: 0;
     right: -100%;
     width: 280px;
-    height: 100vh;
     background: rgba(28, 28, 30, 0.95);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
