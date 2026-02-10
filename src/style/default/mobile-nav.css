@@ -47,20 +47,22 @@
     position: fixed;
     top: 0;
     bottom: 0;
-    right: -100%;
-    width: 280px;
+    left: 0;
+    right: 0;
+    width: 100vw;
     background: rgba(28, 28, 30, 0.95);
     backdrop-filter: blur(40px);
     -webkit-backdrop-filter: blur(40px);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: none;
     z-index: 1999;
-    transition: right 0.3s ease;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
     overflow-y: auto;
     display: none;
 }
 
 .mobile-nav-drawer.active {
-    right: 0;
+    transform: translateX(0);
 }
 
 .mobile-nav-header {
