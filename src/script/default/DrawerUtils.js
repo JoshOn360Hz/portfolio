@@ -1,6 +1,7 @@
     const appDrawer = document.getElementById('appDrawer');
     const openDrawerBtn = document.getElementById('openDrawer');
     const openDrawerDockBtn = document.getElementById('openDrawerDock');
+    const openDrawerCvBtn = document.getElementById('openDrawerCv');
     const closeDrawerBtn = document.getElementById('closeDrawer');
     const drawerProjectsGrid = document.getElementById('drawerProjects');
     const drawerSearch = document.getElementById('drawerSearch');
@@ -83,6 +84,10 @@
     
     if (openDrawerDockBtn) {
         openDrawerDockBtn.addEventListener('click', openDrawer);
+    }
+
+    if (openDrawerCvBtn) {
+        openDrawerCvBtn.addEventListener('click', openDrawer);
     }
     
     // Close drawer
