@@ -62,3 +62,146 @@
     margin-bottom: 20px;
     flex-grow: 1;
 }
+
+#featured-projects {
+    display: none;
+}
+
+.featured-section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.featured-section-header .section-title {
+    margin-bottom: 0;
+}
+
+.featured-projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: stretch;
+}
+
+.featured-project-card {
+    padding: 28px;
+    min-height: 360px;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0)) padding-box,
+        rgba(44, 44, 46, 0.38);
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-card-head {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    align-items: center;
+    column-gap: 14px;
+    margin-bottom: 8px;
+}
+
+.featured-project-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-right: 88px;
+}
+
+.featured-project-title-row h3 {
+    margin-bottom: 0;
+    font-size: 25px;
+    line-height: 1.1;
+}
+
+.featured-project-card .project-description {
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.featured-project-card .project-buttons {
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.featured-project-card .project-buttons .download-button,
+.featured-project-card .project-buttons .download-button-github,
+.featured-project-card .project-buttons .download-button-arduino,
+.featured-project-card .project-buttons .download-button-fortnite {
+    width: 100%;
+    justify-content: center;
+    white-space: nowrap;
+    font-size: 14px;
+    padding: 0.9rem 0.75rem;
+    gap: 0.4rem;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    border: 1px solid transparent;
+}
+
+.featured-project-card .status-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 2;
+}
+
+.status-prod {
+    color: #0b1216;
+    background: linear-gradient(135deg, #7ee8a6 0%, #35c28a 100%);
+    border-color: rgba(53, 194, 138, 0.55);
+}
+
+.status-beta {
+    color: #1a1100;
+    background: linear-gradient(135deg, #ffd97d 0%, #f8b43f 100%);
+    border-color: rgba(248, 180, 63, 0.5);
+}
+
+@media (min-width: 769px) {
+    #featured-projects {
+        display: block;
+    }
+}
+
+@media (max-width: 1080px) {
+    .featured-projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .featured-projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-section-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .featured-project-card {
+        min-height: 0;
+    }
+
+    .featured-project-title-row h3 {
+        font-size: 22px;
+    }
+}

@@ -95,6 +95,94 @@
             </div>
         </section>
 
+        <section id="featured-projects" class="section">
+            <div class="featured-section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <button id="openDrawer" class="app-drawer-btn" type="button">
+                    <i class="fa-solid fa-grip"></i> View All
+                </button>
+            </div>
+            <div class="featured-projects-grid">
+                <div class="project-card featured-project-card">
+                    <div class="featured-card-head">
+                        <div class="project-icon">
+                            <img src="assets/apps/iOS/TailTag.png" alt="TailTag app icon">
+                        </div>
+                        <div class="featured-project-title-row">
+                            <h3>TailTag</h3>
+                            <span class="status-badge status-prod">PROD</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A planespotter app that helps you track aircraft you have seen. Perfect for aviation enthusiasts.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">CoreData</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://apps.apple.com/us/app/tailtag/id6747738157', '_blank')">
+                            <i class="fa-brands fa-apple"></i> App Store
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/TailTagApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card featured-project-card">
+                    <div class="featured-card-head">
+                        <div class="project-icon">
+                            <img src="assets/apps/iOS/cumulus.png" alt="Cumulus app icon">
+                        </div>
+                        <div class="featured-project-title-row">
+                            <h3>Cumulus</h3>
+                            <span class="status-badge status-prod">PROD</span>
+                        </div>
+                    </div>
+                    <p class="project-description">A simple, Vision OS inspired weather app available on iOS, iPadOS and macOS.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">WeatherKit</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://apps.apple.com/us/app/cumulus/id6742735497', '_blank')">
+                            <i class="fa-brands fa-apple"></i> App Store
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/CumulusApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+
+                <div class="project-card featured-project-card">
+                    <div class="featured-card-head">
+                        <div class="project-icon">
+                            <img src="assets/apps/iOS/latch.png" alt="Latch app icon">
+                        </div>
+                        <div class="featured-project-title-row">
+                            <h3>Latch</h3>
+                            <span class="status-badge status-beta">BETA</span>
+                        </div>
+                    </div>
+                    <p class="project-description">Latch is a local password manager with time based OTP support.</p>
+                    <div class="tech-badges">
+                        <span class="badge">Swift</span>
+                        <span class="badge">SwiftUI</span>
+                        <span class="badge">Keychain</span>
+                    </div>
+                    <div class="project-buttons">
+                        <button class="download-button" onclick="window.open('https://testflight.apple.com/join/Zz9YuRC2', '_blank')">
+                            <i class="fa-brands fa-apple"></i> TestFlight
+                        </button>
+                        <button class="download-button-github" onclick="window.open('https://github.com/JoshOn360Hz/LatchApp', '_blank')">
+                            <i class="fa-brands fa-github"></i> Github
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="section">
             <h2 class="section-title">Projects</h2>
             <div class="project-filters">
@@ -734,9 +822,6 @@
                 <a href="assets/cv/Josh_Mansfield_CV.pdf" target="_blank" class="cv-button">
                     <i class="fa-solid fa-file-pdf"></i> View CV
                 </a>
-                <a href="#" id="openDrawerCv" class="cv-button">
-                    <i class="fa-solid fa-grip"></i> View Projects
-                </a>
                 <a href="term.html" class="cv-button alternative-ui-button">
                     <i class="fa-brands fa-apple"></i> Alternative UI
                 </a>
@@ -800,6 +885,7 @@
         <ul>
             <li><a href="#home" title="Home"><i class="fa-solid fa-house"></i><span>Home</span></a></li>
             <li class="projects-nav-link"><a href="#projects" title="Projects"><i class="fa-solid fa-file-code"></i><span>Projects</span></a></li>
+            <li><a href="#featured-projects" title="Featured Projects"><i class="fa-solid fa-star"></i><span>Featured</span></a></li>
             <li><a href="#experience" title="Experience"><i class="fa-solid fa-briefcase"></i><span>Experience</span></a></li>
             <li><a href="#skills" title="Skills"><i class="fa-solid fa-code"></i><span>Skills</span></a></li>
             <li class="divider"></li>

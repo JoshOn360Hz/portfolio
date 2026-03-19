@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Project filtering
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('#projects .project-card');
     
     // Initialize - show only iOS projects by default
     projectCards.forEach(card => {

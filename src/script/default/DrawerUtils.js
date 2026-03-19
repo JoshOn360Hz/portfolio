@@ -6,7 +6,7 @@
     const drawerProjectsGrid = document.getElementById('drawerProjects');
     const drawerSearch = document.getElementById('drawerSearch');
     const drawerFilterButtons = document.querySelectorAll('.drawer-filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('#projects .project-card');
     
     // Populate drawer with all projects
     function populateDrawer() {
