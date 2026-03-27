@@ -2,7 +2,7 @@
 let currentApp = null;
 
 // List of apps that are hidden by default (from UWEAI to VAL)
-const hiddenByDefaultApps = ['uweai', 'mirror', 'ht', 'tbj', 'cts', 'r1', 'led', 'gungame', 'val'];
+    const hiddenByDefaultApps = ['latch', 'pulse', 'moments', 'abj', 'eligibility', 'wearoswatchfaces', 'newspotlight', 'uweai', 'mirror', 'ht', 'tbj', 'cts', 'r1', 'led', 'gungame', 'val'];
 
 function openAppDetails(appId) {
     const appWindow = document.getElementById('app-window');

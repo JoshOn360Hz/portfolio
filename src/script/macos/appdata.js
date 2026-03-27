@@ -44,6 +44,39 @@ const appData = {
             { type: 'github', url: 'https://github.com/JoshOn360Hz/FlipCardsApp', label: 'GitHub' }
         ]
     },
+    latch: {
+        name: 'Latch',
+        icon: 'assets/macos/icons/latch.png',
+        description: 'Latch is a local password manager designed for secure credential storage, with built-in TOTP support.',
+        tech: ['Swift', 'SwiftUI', 'Keychain'],
+        links: [
+            { type: 'appstore', url: 'https://testflight.apple.com/join/Zz9YuRC2', label: 'TestFlight' },
+            { type: 'website', url: 'https://appsbyjosh.com/latch.html', label: 'Website' },
+            { type: 'github', url: 'https://github.com/JoshOn360Hz/LatchApp', label: 'GitHub' }
+        ]
+    },
+    pulse: {
+        name: 'Pulse',
+        icon: 'assets/macos/icons/pulse.png',
+        description: 'Pulse is a diagnostics app designed to help verify the core functionality of your iPhone.',
+        tech: ['Swift', 'SwiftUI', 'Diagnostics'],
+        links: [
+            { type: 'appstore', url: 'https://apps.apple.com/gb/app/pulse-mobile-diagnostics/id6757356341', label: 'App Store' },
+            { type: 'website', url: 'https://appsbyjosh.com/pulse.html', label: 'Website' },
+            { type: 'github', url: 'https://github.com/JoshOn360Hz/PulseApp', label: 'GitHub' }
+        ]
+    },
+    moments: {
+        name: 'Moments',
+        icon: 'assets/macos/icons/moments.png',
+        description: 'Moments is a countdown app designed to help track important dates.',
+        tech: ['Swift', 'SwiftUI', 'ActivityKit'],
+        links: [
+            { type: 'appstore', url: 'https://apps.apple.com/gb/app/moments-countdown/id6759080639', label: 'App Store' },
+            { type: 'website', url: 'https://appsbyjosh.com/moments.html', label: 'Website' },
+            { type: 'github', url: 'https://github.com/JoshOn360Hz/MomentsApp', label: 'GitHub' }
+        ]
+    },
     ht: {
         name: 'Horizon Travels',
         icon: 'assets/macos/icons/ht.png',
@@ -51,6 +84,15 @@ const appData = {
         tech: ['Python', 'Flask', 'SQL'],
         links: [
             { type: 'github', url: 'https://github.com/JoshOn360Hz/HorizonTravels-webyear1', label: 'GitHub' }
+        ]
+    },
+    abj: {
+        name: 'Apps By Josh',
+        icon: 'assets/macos/icons/abj.png',
+        description: 'Landing page and promotional website for my App Store portfolio.',
+        tech: ['CSS', 'HTML', 'JavaScript'],
+        links: [
+            { type: 'website', url: 'https://appsbyjosh.com', label: 'Website' }
         ]
     },
     uweai: {
@@ -110,6 +152,15 @@ const appData = {
             { type: 'github', url: 'https://github.com/JoshOn360Hz/ComsLoopArduino', label: 'GitHub' }
         ]
     },
+    eligibility: {
+        name: 'Eligibility Bypass',
+        icon: 'assets/macos/icons/eligibility.png',
+        description: 'Replace eligibility files to control region restricted features on jailbroken iOS devices.',
+        tech: ['Jailbreak', 'iOS', 'System Modification'],
+        links: [
+            { type: 'github', url: 'https://github.com/JoshOn360Hz/EligibilityBypass', label: 'GitHub' }
+        ]
+    },
     gungame: {
         name: 'Gun Game',
         icon: 'assets/macos/icons/gungame.png',
@@ -127,6 +178,24 @@ const appData = {
         links: [
             { type: 'website', url: 'https://joshon360hz.github.io/ValRandomiser-web/', label: 'View WASM App' },
             { type: 'github', url: 'https://github.com/JoshOn360Hz/ValRandomiser', label: 'GitHub' }
+        ]
+    },
+    wearoswatchfaces: {
+        name: 'WearOS Watchfaces',
+        icon: 'assets/macos/icons/wearoswatchfaces.png',
+        description: 'A collection of custom watchfaces for WearOS devices.',
+        tech: ['Android', 'WearOS', 'Customization'],
+        links: [
+            { type: 'website', url: 'https://joshon360hz.github.io/WearOSWatchfaces/', label: 'Website' }
+        ]
+    },
+    newspotlight: {
+        name: 'New Spotlight Manager',
+        icon: 'assets/macos/icons/newspotlight.png',
+        description: 'A Python script to enable or disable the redesigned Spotlight and Launchpad UI in the macOS Tahoe beta.',
+        tech: ['Python', 'macOS', 'System Modification'],
+        links: [
+            { type: 'github', url: 'https://github.com/JoshOn360Hz/New-Spotlight-Manager', label: 'GitHub' }
         ]
     }
 };

@@ -16,7 +16,7 @@ function populateLaunchpad() {
     // Define categories
     const categories = {
         'Recommended': ['cumulus', 'flipcards', 'tailtag', 'pinboard', 'uweai'],
-        'All Apps': ['cumulus', 'flipcards', 'tailtag', 'pinboard', 'uweai', 'mirror', 'ht', 'tbj', 'cts', 'r1', 'led', 'gungame', 'val']
+        'All Apps': ['cumulus', 'flipcards', 'tailtag', 'pinboard', 'latch', 'pulse', 'moments', 'abj', 'eligibility', 'wearoswatchfaces', 'newspotlight', 'uweai', 'mirror', 'ht', 'tbj', 'cts', 'r1', 'led', 'gungame', 'val']
     };
     
     let html = '';

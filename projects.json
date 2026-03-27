@@ -20,7 +20,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/TailTagApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -53,7 +53,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/CumulusApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -86,7 +86,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/LatchApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -116,7 +116,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/PinBoard-App",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -146,7 +146,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/FlipCardsApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -176,7 +176,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/PulseApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -206,7 +206,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/MomentsApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -242,7 +242,7 @@
       "badges": ["Python", "Flask", "SQL"],
       "links": [
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/HorizonTravels-webyear1",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -266,7 +266,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/UWE-FSAI/Web",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -302,7 +302,7 @@
       "badges": ["Flask", "API", "IOT"],
       "links": [
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/smartmirrorweb",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -326,7 +326,7 @@
           "buttonClass": "download-button-arduino"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/CTS-Project",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -344,7 +344,7 @@
       "badges": ["Android", "Custom ROM", "Hardware"],
       "links": [
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/Making-the-R1-useful",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -368,7 +368,7 @@
           "buttonClass": "download-button-arduino"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/ComsLoopArduino",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -386,7 +386,7 @@
       "badges": ["Jailbreak", "iOS", "System Modification"],
       "links": [
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/EligibilityBypass",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -410,7 +410,7 @@
           "buttonClass": "download-button"
         },
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/ValRandomiser",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
@@ -446,7 +446,7 @@
       "badges": ["Python", "macOS", "System Modification"],
       "links": [
         {
-          "label": "Github",
+          "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/New-Spotlight-Manager",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
