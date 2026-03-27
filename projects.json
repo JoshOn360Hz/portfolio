@@ -1,0 +1,493 @@
+{
+  "projects": [
+    {
+      "id": "tailtag",
+      "name": "TailTag",
+      "category": "ios",
+      "image": "assets/apps/iOS/TailTag.png",
+      "imageAlt": "TailTag app icon",
+      "description": "A planespotter app that helps you track aircraft you have seen. Perfect for aviation enthusiasts.",
+      "featured": true,
+      "featuredOrder": 1,
+      "status": "prod",
+      "statusLabel": "PROD",
+      "badges": ["Swift", "SwiftUI", "CoreData"],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/tailtag/id6747738157",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/TailTagApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "cumulus",
+      "name": "Cumulus",
+      "category": "ios",
+      "image": "assets/apps/iOS/cumulus.png",
+      "imageAlt": "Cumulus app icon",
+      "description": "A simple, Vision OS inspired weather app available on iOS, iPadOS and macOS.",
+      "featured": true,
+      "featuredOrder": 2,
+      "status": "prod",
+      "statusLabel": "PROD",
+      "badges": ["Swift", "SwiftUI", "WeatherKit"],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/cumulus/id6742735497",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/cumulus.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/CumulusApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "latch",
+      "name": "Latch",
+      "category": "ios",
+      "image": "assets/apps/iOS/latch.png",
+      "imageAlt": "Latch app icon",
+      "description": "Latch is a local password manager designed for secure credential storage, with built-in TOTP support.",
+      "featured": true,
+      "featuredOrder": 3,
+      "status": "beta",
+      "statusLabel": "BETA",
+      "badges": ["Swift", "SwiftUI", "Keychain"],
+      "links": [
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/join/Zz9YuRC2",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/latch.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/LatchApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "pinboard",
+      "name": "PinBoard",
+      "category": "ios",
+      "image": "assets/apps/iOS/pinboard.png",
+      "imageAlt": "PinBoard app icon",
+      "description": "A notes and reminders app that uses live activities, available on iOS and iPadOS. Stay organized with style.",
+      "featured": false,
+      "badges": ["Swift", "Live Activities", "CoreData"],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/pinboard-better-notes/id6747376814",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/pinboard.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/PinBoard-App",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "flipcards",
+      "name": "FlipCards",
+      "category": "ios",
+      "image": "assets/apps/iOS/flipcards.png",
+      "imageAlt": "FlipCards app icon",
+      "description": "A flashcard app designed to help you study and memorize information efficiently. Perfect for students and lifelong learners.",
+      "featured": false,
+      "badges": ["Swift", "SwiftUI", "CoreData"],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/gb/app/flipcards-revision-made-easy/id6749154468",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/flipcards.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/FlipCardsApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "pulse",
+      "name": "Pulse",
+      "category": "ios",
+      "image": "assets/apps/iOS/Pulse.png",
+      "imageAlt": "Pulse app icon",
+      "description": "Pulse is a diagnostics app designed to help verify the core functionality of your iPhone.",
+      "featured": false,
+      "badges": ["Swift", "SwiftUI", "Diagnostics"],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/gb/app/pulse-mobile-diagnostics/id6757356341",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/pulse.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/PulseApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "moments",
+      "name": "Moments",
+      "category": "ios",
+      "image": "assets/apps/iOS/moments.png",
+      "imageAlt": "Moments app icon",
+      "description": "Moments is a countdown app designed to help track important dates.",
+      "featured": false,
+      "badges": ["Swift", "SwiftUI", "ActivityKit"],
+      "links": [
+        {
+          "label": "App Store",
+          "url": "https://apps.apple.com/gb/app/moments-countdown/id6759080639",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/moments.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/MomentsApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "apps-by-josh",
+      "name": "Apps By Josh",
+      "category": "web",
+      "image": "assets/apps/web/ABJ.png",
+      "imageAlt": "AppsByJosh app icon",
+      "description": "Landing page and promotional website for my App Store portfolio.",
+      "featured": false,
+      "badges": ["CSS", "HTML", "JavaScript"],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        }
+      ]
+    },
+    {
+      "id": "horizon-travels",
+      "name": "Horizon Travels",
+      "category": "web",
+      "image": "assets/apps/web/ht.png",
+      "imageAlt": "Horizon Travels app icon",
+      "description": "A web-based flight booking system built with Python (Flask), CSS, JavaScript, HTML and SQL.",
+      "featured": false,
+      "badges": ["Python", "Flask", "SQL"],
+      "links": [
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/HorizonTravels-webyear1",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "uwe-ai",
+      "name": "UWE AI",
+      "category": "web",
+      "image": "assets/apps/web/UWEAI.png",
+      "imageAlt": "UWE AI app icon",
+      "description": "Website for the UWE AI Autonomous Racing Society, showcasing autonomous racing technology.",
+      "featured": false,
+      "badges": ["HTML", "CSS", "JavaScript"],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://uweai.co.uk/",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/UWE-FSAI/Web",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "tech-by-josh",
+      "name": "Tech By Josh",
+      "category": "web",
+      "image": "assets/apps/web/tbj-logo.png",
+      "imageAlt": "Tech By Josh icon",
+      "description": "The website for my tech support business built with JavaScript, CSS and HTML.",
+      "featured": false,
+      "badges": ["HTML", "CSS", "JavaScript"],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://techbyjosh.dev/",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        }
+      ]
+    },
+    {
+      "id": "smart-mirror-web",
+      "name": "Smart Mirror Web",
+      "category": "web",
+      "image": "assets/apps/web/mirror.png",
+      "imageAlt": "Smart Mirror Web icon",
+      "description": "Web-based mirror OS displaying date, time, weather and calendar for smart mirror integration.",
+      "featured": false,
+      "badges": ["Flask", "API", "IOT"],
+      "links": [
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/smartmirrorweb",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "keypad-project",
+      "name": "Keypad Project",
+      "category": "hardware",
+      "image": "assets/apps/hardware/CTS.png",
+      "imageAlt": "Keyboard CTS icon",
+      "description": "Escape room puzzle project featuring Arduino-based keycard and wiring system.",
+      "featured": false,
+      "badges": ["Arduino", "C++", "Wiring"],
+      "links": [
+        {
+          "label": "Arduino Web Editor",
+          "url": "https://app.arduino.cc/sketches/13683222-1e2f-4236-b747-e238dbb75ecc?view-mode=preview",
+          "iconClass": "fas fa-microchip",
+          "buttonClass": "download-button-arduino"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/CTS-Project",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "r1-modification",
+      "name": "R1 Modification",
+      "category": "hardware",
+      "image": "assets/apps/hardware/r1.png",
+      "imageAlt": "Making the R1 useful icon",
+      "description": "Custom modifications to Rabbit R1 Android experience, adding stock features and customizations.",
+      "featured": false,
+      "badges": ["Android", "Custom ROM", "Hardware"],
+      "links": [
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/Making-the-R1-useful",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "comms-loop",
+      "name": "Comms Loop",
+      "category": "hardware",
+      "image": "assets/apps/hardware/led.png",
+      "imageAlt": "Comms Loop icon",
+      "description": "Using an Arduino, photoresistor and an LED to transmit bytes and decode them into outputs.",
+      "featured": false,
+      "badges": ["Arduino", "Electronics", "Hardware"],
+      "links": [
+        {
+          "label": "Arduino Web Editor",
+          "url": "https://app.arduino.cc/sketches/1edd2233-3956-43df-a079-eebec21027b4?view-mode=preview",
+          "iconClass": "fas fa-microchip",
+          "buttonClass": "download-button-arduino"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/ComsLoopArduino",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "eligibility-bypass",
+      "name": "Eligibility Bypass",
+      "category": "hardware",
+      "image": "assets/apps/hardware/eligibility.png",
+      "imageAlt": "Eligibility Bypass icon",
+      "description": "Replace eligibility files to control region restricted features on jailbroken iOS devices.",
+      "featured": false,
+      "badges": ["Jailbreak", "iOS", "System Modification"],
+      "links": [
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/EligibilityBypass",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "val-randomiser",
+      "name": "Val Randomiser",
+      "category": "other",
+      "image": "assets/apps/other/val.png",
+      "imageAlt": "ValRandomiser icon",
+      "description": "C application with nice UI to randomly select Valorant agents, also available as web WASM app.",
+      "featured": false,
+      "badges": ["C", "Gaming", "WASM"],
+      "links": [
+        {
+          "label": "View WASM App",
+          "url": "https://joshon360hz.github.io/ValRandomiser-web/",
+          "iconClass": "fas fa-code",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/ValRandomiser",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "wearos-watchfaces",
+      "name": "WearOS Watchfaces",
+      "category": "other",
+      "image": "assets/apps/other/wos.png",
+      "imageAlt": "WearOSWatchfaces icon",
+      "description": "A collection of custom watchfaces for WearOS devices.",
+      "featured": false,
+      "badges": ["Android", "WearOS", "Customization"],
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://joshon360hz.github.io/WearOSWatchfaces/",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        }
+      ]
+    },
+    {
+      "id": "new-spotlight-manager",
+      "name": "New Spotlight Manager",
+      "category": "other",
+      "image": "assets/apps/other/newspotlight.png",
+      "imageAlt": "New Spotlight icon",
+      "description": "A Python script to enable or disable the redesigned Spotlight and Launchpad UI in the macOS Tahoe beta.",
+      "featured": false,
+      "badges": ["Python", "macOS", "System Modification"],
+      "links": [
+        {
+          "label": "Github",
+          "url": "https://github.com/JoshOn360Hz/New-Spotlight-Manager",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "jtempo-1v1",
+      "name": "Jtempo 1v1",
+      "category": "other",
+      "image": "assets/apps/other/jt1v1.png",
+      "imageAlt": "Jtempo 1v1 icon",
+      "description": "A UEFN and Verse project for promoting a streamer friends brand",
+      "featured": false,
+      "badges": ["UEFN", "Verse", "Gaming"],
+      "links": [
+        {
+          "label": "Play on Fortnite",
+          "url": "com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true&arg=-IslandOverride%3D3748-5335-6767&arg=-src%3D0&arg=-pl%3D02",
+          "iconClass": "fas fa-gamepad",
+          "buttonClass": "download-button-fortnite"
+        }
+      ]
+    },
+    {
+      "id": "gun-game",
+      "name": "Gun Game",
+      "category": "other",
+      "image": "assets/apps/other/gungame.png",
+      "imageAlt": "Gun Game icon",
+      "description": "Verse and UEFN Gun Game map with custom POIs created for a streamer friend.",
+      "featured": false,
+      "badges": ["UEFN", "Verse", "Gaming"],
+      "links": [
+        {
+          "label": "Play on Fortnite",
+          "url": "com.epicgames.launcher://apps/fn%3A4fe75bbc5a674f4f9b356b5c90567da5%3AFortnite?action=launch&silent=true&arg=-IslandOverride%3D6788-1220-9273",
+          "iconClass": "fas fa-gamepad",
+          "buttonClass": "download-button-fortnite"
+        }
+      ]
+    }
+  ]
+}

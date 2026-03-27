@@ -1,20 +1,58 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const mobileNavDrawer = document.getElementById('mobileNavDrawer');
-    const closeDrawer = document.getElementById('closeDrawer');
+    const closeDrawer = document.getElementById('closeMobileMenu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const focusableSelector = 'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+    let previousFocusedElement = null;
+
+    function trapMobileFocus(event) {
+        if (!mobileNavDrawer || !mobileNavDrawer.classList.contains('active') || event.key !== 'Tab') {
+            return;
+        }
+
+        const focusableElements = mobileNavDrawer.querySelectorAll(focusableSelector);
+        if (!focusableElements.length) {
+            return;
+        }
+
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstElement) {
+            event.preventDefault();
+            lastElement.focus();
+        } else if (!event.shiftKey && document.activeElement === lastElement) {
+            event.preventDefault();
+            firstElement.focus();
+        }
+    }
 
     // Toggle drawer
     function openDrawer() {
+        previousFocusedElement = document.activeElement;
         mobileNavDrawer.classList.add('active');
+        mobileNavDrawer.setAttribute('aria-hidden', 'false');
         hamburgerMenu.classList.add('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'true');
         document.body.style.overflow = 'hidden';
+
+        const firstLink = mobileNavDrawer.querySelector('.mobile-nav-link');
+        if (firstLink) {
+            firstLink.focus();
+        }
     }
 
     function closeDrawerFunc() {
         mobileNavDrawer.classList.remove('active');
+        mobileNavDrawer.setAttribute('aria-hidden', 'true');
         hamburgerMenu.classList.remove('active');
+        hamburgerMenu.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
+
+        if (previousFocusedElement && typeof previousFocusedElement.focus === 'function') {
+            previousFocusedElement.focus();
+        }
     }
 
     // Event listeners
@@ -51,26 +89,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle active state for mobile nav links
-    window.addEventListener('scroll', function() {
-        if (window.innerWidth <= 768) {
-            const sections = document.querySelectorAll('.section');
-            const scrollPos = window.scrollY + 100;
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    mobileNavLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.add('active');
-                        }
-                    });
-                }
-            });
+    document.addEventListener('activeSectionChange', function(event) {
+        const sectionId = event.detail?.sectionId;
+        if (!sectionId) {
+            return;
         }
+
+        mobileNavLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
+        });
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (!mobileNavDrawer || !mobileNavDrawer.classList.contains('active')) {
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            closeDrawerFunc();
+            return;
+        }
+
+        trapMobileFocus(event);
     });
 });

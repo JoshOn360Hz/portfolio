@@ -1,46 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.dock a[href^="#"]');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link[href^="#"]');
     const sections = document.querySelectorAll('section[id]');
-    let isNavigating = false;
     
     // Set home as active by default
     if (navLinks.length > 0) {
         navLinks[0].classList.add('active');
     }
-    
-    // Project filtering
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('#projects .project-card');
-    
-    // Initialize - show only iOS projects by default
-    projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        if (category !== 'ios') {
-            card.classList.add('hidden');
-        }
-    });
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter projects
-            projectCards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                
-                if (category === filter) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        });
-    });
-    
     
     // Handle navigation clicks
     navLinks.forEach(link => {
@@ -63,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetSection = document.querySelector(targetId);
             
             if (targetSection) {
-                isNavigating = true;
-                
                 // Reset section transform and opacity before scrolling
                 targetSection.style.transform = 'translateY(0)';
                 targetSection.style.opacity = '1';
@@ -74,11 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     behavior: 'smooth',
                     block: 'start'
                 });
-                
-                // Re-enable effects after scroll completes
-                setTimeout(() => {
-                    isNavigating = false;
-                }, 1000);
             }
         });
     });
@@ -130,5 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 link.classList.add('active');
             }
         });
+
+        mobileNavLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${currentSection}`);
+        });
+
+        document.dispatchEvent(new CustomEvent('activeSectionChange', {
+            detail: { sectionId: currentSection }
+        }));
     }
 });

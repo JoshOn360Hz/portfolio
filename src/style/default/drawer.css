@@ -101,7 +101,7 @@
     color: var(--text);
     font-size: 14px;
     font-family: inherit;
-    caret-color: transparent;
+    caret-color: var(--text);
 }
 
 .drawer-search::placeholder {
