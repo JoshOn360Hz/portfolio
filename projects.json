@@ -74,8 +74,8 @@
       "badges": ["Swift", "SwiftUI", "Keychain"],
       "links": [
         {
-          "label": "TestFlight",
-          "url": "https://testflight.apple.com/join/Zz9YuRC2",
+          "label": "App Store",
+          "url": "https://apps.apple.com/us/app/latch-password-manager/id6760635515",
           "iconClass": "fa-brands fa-apple",
           "buttonClass": "download-button"
         },
