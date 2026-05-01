@@ -19,6 +19,12 @@
           "iconClass": "fa-brands fa-apple",
           "buttonClass": "download-button"
         },
+         {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/tailtag.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
         {
           "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/TailTagApp",
