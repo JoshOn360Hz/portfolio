@@ -73,8 +73,7 @@
       "image": "assets/apps/iOS/latch.png",
       "imageAlt": "Latch app icon",
       "description": "Latch is a local password manager designed for secure credential storage, with built-in TOTP support.",
-      "featured": true,
-      "featuredOrder": 3,
+      "featured": false,
       "status": "beta",
       "statusLabel": "BETA",
       "badges": ["Swift", "SwiftUI", "Keychain"],
@@ -214,6 +213,39 @@
         {
           "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/MomentsApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "uplink",
+      "name": "UpLink",
+      "category": "ios",
+      "image": "assets/apps/iOS/uplink.png",
+      "imageAlt": "UpLink app icon",
+      "description": "A network strategy game. Build and manage infrastructure to keep devices connected before the network goes down.",
+      "featured": true,
+      "featuredOrder": 3,
+      "status": "beta",
+      "statusLabel": "BETA",
+      "badges": ["Swift", "SwiftUI", "SpriteKit"],
+      "links": [
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/join/kfQHX2bq",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/uplink.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/JoshOn360Hz/UpLinkApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
         }
