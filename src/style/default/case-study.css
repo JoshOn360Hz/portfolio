@@ -405,3 +405,10 @@ main {
     color: var(--text);
     box-shadow: 0 2px 8px rgba(88, 86, 214, 0.1);
 }
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .custom-icons-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
