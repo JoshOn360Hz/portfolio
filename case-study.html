@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cumulus Case Study - Evolving a SwiftUI Weather App Through Four Major Versions">
+    <meta name="author" content="Josh Mansfield">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-title" content="Cumulus Case Study" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://joshmansfielddevelopment.com/case-study.html">
+    <meta property="og:title" content="Cumulus Case Study - Weather App Development">
+    <meta property="og:description" content="A comprehensive case study on building and iterating a SwiftUI weather application across four major versions.">
+    <meta property="og:image" content="assets/cumuluscasestudy/logo-4.0.png">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cumulus Case Study - Weather App Development">
+    <meta name="twitter:description" content="A comprehensive case study on building and iterating a SwiftUI weather application across four major versions.">
+    <meta name="twitter:image" content="assets/cumuluscasestudy/logo-4.0.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favico/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/favico/favicon.svg" />
+    <link rel="shortcut icon" href="assets/favico/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favico/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/favico/site.webmanifest" />
+
+    <title>Cumulus Case Study - Josh Mansfield</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/style/default/base.css">
+    <link rel="stylesheet" href="src/style/default/colors.css">
+    <link rel="stylesheet" href="src/style/default/buttons.css">
+    <link rel="stylesheet" href="src/style/default/cards.css">
+    <link rel="stylesheet" href="src/style/default/experience.css">
+    <link rel="stylesheet" href="src/style/default/media-queries.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e2cf8702e2.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Case Study Specific Styles */
+        main {
+            padding: 60px 40px 40px;
+        }
+
+        .case-study-hero {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .case-study-hero-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 24px;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .case-study-hero-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .case-study-hero h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -1.2px;
+            line-height: 1.1;
+        }
+
+        .case-study-subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .case-study-overview {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .case-study-overview p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 0;
+        }
+
+        .version-section {
+            margin-bottom: 64px;
+        }
+
+        .version-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .version-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+            flex-shrink: 0;
+        }
+
+        .version-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .version-title-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .version-number {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--indigo);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .version-title {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.7px;
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .version-content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .version-content h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            letter-spacing: -0.2px;
+            color: var(--text);
+        }
+
+        .version-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .version-content p,
+        .version-content ul {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 12px;
+        }
+
+        .version-content ul {
+            padding-left: 20px;
+        }
+
+        .version-content li {
+            margin-bottom: 6px;
+        }
+
+        .version-content p:last-child,
+        .version-content ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .custom-icons-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .screenshot-container {
+            background: rgba(44, 44, 46, 0.35);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: var(--radius-lg);
+            padding: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .screenshot-container img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            display: block;
+        }
+
+        .screenshot-caption {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 10px;
+        }
+
+        .highlight-box {
+            background: rgba(88, 86, 214, 0.1);
+            border: 1px solid rgba(88, 86, 214, 0.3);
+            border-radius: var(--radius-md);
+            padding: 18px 20px;
+            margin: 16px 0 0 0;
+        }
+
+        .highlight-box p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .results-section {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin-bottom: 48px;
+        }
+
+        .results-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.7px;
+        }
+
+        .results-section > p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .result-category h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+
+        .result-category ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .result-category li {
+            font-size: 14px;
+            line-height: 1.5;
+            color: var(--text);
+            margin-bottom: 6px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .result-category li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--indigo);
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--indigo);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            margin-bottom: 32px;
+            transition: transform 0.2s ease;
+        }
+
+        .back-link:hover {
+            transform: translateX(-4px);
+        }
+
+        .back-link i {
+            font-size: 13px;
+        }
+
+        .read-about-section {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 28px 32px;
+            margin-bottom: 48px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .read-about-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .read-about-section p {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="index.html" class="back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <!-- Hero Section -->
+        <div class="case-study-hero">
+            <div class="case-study-hero-icon">
+                <img src="assets/cumuluscasestudy/logo-evolution/logo-4.0.png" alt="Cumulus App Icon">
+            </div>
+            <h1>Cumulus</h1>
+            <p class="case-study-subtitle">Evolving a SwiftUI Weather App Through Four Major Versions</p>
+        </div>
+
+        <!-- Overview -->
+        <div class="case-study-overview">
+            <p>Cumulus is a weather application built using SwiftUI and WeatherKit. Originally created as a learning project, it evolved over multiple years into a fully featured weather platform supporting iPhone, iPad, widgets, custom app icons, and a significantly expanded weather data experience.</p>
+            <br>
+            <p>The project demonstrates iterative product development, platform expansion, UI redesign, and long-term maintenance.</p>
+        </div>
+
+        <!-- Version 1.0 -->
+        <section class="version-section">
+            <div class="version-header">
+                <div class="version-icon">
+                    <img src="assets/cumuluscasestudy/logo-evolution/logo-1.0.png" alt="Version 1.0 Icon">
+                </div>
+                <div class="version-title-group">
+                    <span class="version-number">Version 1.0</span>
+                    <h2 class="version-title">Initial Release</h2>
+                </div>
+            </div>
+
+            <div class="version-content">
+                <h3>Goal</h3>
+                <p>Create a simple weather application using SwiftUI and WeatherKit.</p>
+
+                <h3>Features</h3>
+                <ul>
+                    <li>Current weather conditions</li>
+                    <li>Multi-city support</li>
+                    <li>Wind information</li>
+                    <li>Humidity information</li>
+                    <li>Dynamic backgrounds</li>
+                    <li>Light and dark mode support</li>
+                </ul>
+
+                <h3>Design</h3>
+                <p>The initial design focused on simplicity. Large glassmorphic cards presented only the most important information: current temperature, conditions, wind, humidity, wind direction, and feels like temperature.</p>
+
+                <h3>Challenges</h3>
+                <p>As a first release, the focus was proving the technical concept rather than building a feature-rich product.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Key areas learned:</strong> SwiftUI layout system, WeatherKit integration, state management, and App Store deployment.</p>
+                </div>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.0-1.5/1.0california.png" alt="Version 1.0 - California">
+                    <div class="screenshot-caption">California Weather View</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.0-1.5/1.0madrid.png" alt="Version 1.0 - Madrid">
+                    <div class="screenshot-caption">Madrid Weather View</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.0-1.5/1.0bristol.png" alt="Version 1.0 - Bristol">
+                    <div class="screenshot-caption">Bristol Weather View</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 1.5 -->
+        <section class="version-section">
+            <div class="version-header">
+                <div class="version-icon">
+                    <img src="assets/cumuluscasestudy/logo-evolution/logo-1.0.png" alt="Version 1.5 Icon">
+                </div>
+                <div class="version-title-group">
+                    <span class="version-number">Version 1.5</span>
+                    <h2 class="version-title">Personalisation Update</h2>
+                </div>
+            </div>
+
+            <div class="version-content">
+                <h3>Goal</h3>
+                <p>Allow users to customise the appearance of the application.</p>
+
+                <h3>New Features</h3>
+                <ul>
+                    <li>Alternate app icons</li>
+                    <li>User customisation options</li>
+                </ul>
+
+                <h3>Why It Mattered</h3>
+                <p>This update was small technically but important from a product perspective. Rather than only focusing on new functionality, it introduced personalisation and allowed users to make the app feel more their own.</p>
+            </div>
+
+            <div class="custom-icons-grid">
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.5-custom-icons/purple.png" alt="Purple Custom Icon">
+                    <div class="screenshot-caption">Purple Theme</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.5-custom-icons/dark.png" alt="Dark Custom Icon">
+                    <div class="screenshot-caption">Dark Theme</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.5-custom-icons/cat.png" alt="Cat Custom Icon">
+                    <div class="screenshot-caption">Cat Icon</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.5-custom-icons/dog.png" alt="Dog Custom Icon">
+                    <div class="screenshot-caption">Dog Icon</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/1.5-custom-icons/bear.png" alt="Bear Custom Icon">
+                    <div class="screenshot-caption">Bear Icon</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 2.0 -->
+        <section class="version-section">
+            <div class="version-header">
+                <div class="version-icon">
+                    <img src="assets/cumuluscasestudy/logo-evolution/logo-2.0-3.0.png" alt="Version 2.0 Icon">
+                </div>
+                <div class="version-title-group">
+                    <span class="version-number">Version 2.0</span>
+                    <h2 class="version-title">Expanding to iPad</h2>
+                </div>
+            </div>
+
+            <div class="version-content">
+                <h3>Goal</h3>
+                <p>Bring the application to larger screens.</p>
+
+                <h3>Major Addition</h3>
+                <ul>
+                    <li>Full iPad support</li>
+                </ul>
+
+                <h3>Design Changes</h3>
+                <p>The original iPhone layout was completely rethought for tablet devices. New widgets included sunrise, sunset, visibility, precipitation, pressure, UV index, multi-day forecasts, and hourly forecasts.</p>
+
+                <h3>Technical Challenges</h3>
+                <p>Building for iPad required responsive SwiftUI layouts, adaptive sizing, flexible spacing systems, and support for multiple orientations.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Outcome:</strong> Cumulus evolved from a simple phone application into a cross-device weather platform.</p>
+                </div>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/2.0/2.0ipadcalifornia.png" alt="Version 2.0 - iPad California">
+                    <div class="screenshot-caption">iPad View - California</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/2.0/2.0ipadsydney.png" alt="Version 2.0 - iPad Sydney">
+                    <div class="screenshot-caption">iPad View - Sydney</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 3.0 -->
+        <section class="version-section">
+            <div class="version-header">
+                <div class="version-icon">
+                    <img src="assets/cumuluscasestudy/logo-evolution/logo-2.0-3.0.png" alt="Version 3.0 Icon">
+                </div>
+                <div class="version-title-group">
+                    <span class="version-number">Version 3.0</span>
+                    <h2 class="version-title">Complete UI Overhaul</h2>
+                </div>
+            </div>
+
+            <div class="version-content">
+                <h3>Goal</h3>
+                <p>Modernise the entire user experience.</p>
+
+                <h3>Why a Redesign Was Needed</h3>
+                <p>While Version 2 was feature rich, the interface was becoming difficult to scale. Adding more weather information required a more flexible design system.</p>
+
+                <h3>Major Changes</h3>
+                <ul>
+                    <li>New navigation structure</li>
+                    <li>Dedicated search experience</li>
+                    <li>Settings screen</li>
+                    <li>Improved weather views</li>
+                    <li>Better information hierarchy</li>
+                    <li>Redesigned visual language</li>
+                </ul>
+
+                <h3>Search Experience</h3>
+                <p>A completely new search workflow was introduced with recent searches, current location shortcuts, and cleaner location management.</p>
+
+                <h3>Design Evolution</h3>
+                <p>Version 3 introduced stronger typography, better spacing, more consistent card design, and improved visual hierarchy.</p>
+
+                <div class="highlight-box">
+                    <p><strong>This marked the transition from:</strong> "A weather app built by a developer" <strong>to</strong> "A weather product designed for users."</p>
+                </div>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/3.0/3.0search.png" alt="Version 3.0 - Search">
+                    <div class="screenshot-caption">New Search Interface</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/3.0/3.0london.png" alt="Version 3.0 - London">
+                    <div class="screenshot-caption">London Weather View</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/3.0/3.0sydney.png" alt="Version 3.0 - Sydney">
+                    <div class="screenshot-caption">Sydney Weather View</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version 4.0 -->
+        <section class="version-section">
+            <div class="version-header">
+                <div class="version-icon">
+                    <img src="assets/cumuluscasestudy/logo-evolution/logo-4.0.png" alt="Version 4.0 Icon">
+                </div>
+                <div class="version-title-group">
+                    <span class="version-number">Version 4.0</span>
+                    <h2 class="version-title">Refinement & Product Maturity</h2>
+                </div>
+            </div>
+
+            <div class="version-content">
+                <h3>Goal</h3>
+                <p>Polish every part of the experience.</p>
+
+                <p>Unlike Version 3, which focused on redesigning everything, Version 4 focused on refinement and depth.</p>
+
+                <h3>New Features</h3>
+                <ul>
+                    <li>Detailed hourly forecasts</li>
+                    <li>10-day forecast view</li>
+                    <li>Dew point tracking</li>
+                    <li>Cloud cover information</li>
+                    <li>Wind gust data</li>
+                    <li>Improved UV presentation</li>
+                    <li>Enhanced pressure visualisation</li>
+                    <li>Sunrise and sunset visualisation</li>
+                    <li>Richer weather analytics</li>
+                </ul>
+
+                <h3>Interface Improvements</h3>
+                <ul>
+                    <li>Improved spacing</li>
+                    <li>Better card organisation</li>
+                    <li>Enhanced readability</li>
+                    <li>More efficient information density</li>
+                    <li>Improved accessibility</li>
+                    <li>Cleaner navigation</li>
+                </ul>
+
+                <h3>App Icon Redesign</h3>
+                <p>Version 4 introduced a completely redesigned icon. Compared with the original cloud logo, the new icon better reflects weather conditions, uses stronger visual depth, creates a more recognisable brand identity, and feels more aligned with modern iOS design.</p>
+            </div>
+
+            <div class="screenshots-grid">
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/4.0/4.0-1.png" alt="Version 4.0 - Screenshot 1">
+                    <div class="screenshot-caption">Enhanced Weather Details</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/4.0/4.0-2.png" alt="Version 4.0 - Screenshot 2">
+                    <div class="screenshot-caption">10-Day Forecast</div>
+                </div>
+                <div class="screenshot-container">
+                    <img src="assets/cumuluscasestudy/4.0/4.0-3.png" alt="Version 4.0 - Screenshot 3">
+                    <div class="screenshot-caption">Advanced Weather Data</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Read About Section -->
+        <section class="read-about-section">
+            <h2>About Cumulus Development</h2>
+            <p>Cumulus began as a personal learning project to explore SwiftUI and WeatherKit, but grew into a comprehensive case study in iterative product development. Each version addressed specific user needs while maintaining technical quality and design consistency. The project demonstrates end-to-end ownership, from initial concept through multiple major releases, showcasing the ability to evolve a product based on user feedback and platform capabilities.</p>
+        </section>
+
+        <!-- Results -->
+        <section class="results-section">
+            <h2>Results</h2>
+            <p>Across four major versions, Cumulus evolved from a simple weather viewer into a comprehensive weather platform.</p>
+
+            <div class="results-grid">
+                <div class="result-category">
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>SwiftUI</li>
+                        <li>WeatherKit</li>
+                        <li>WidgetKit</li>
+                        <li>Adaptive layouts</li>
+                        <li>State management</li>
+                        <li>App Store deployment</li>
+                    </ul>
+                </div>
+
+                <div class="result-category">
+                    <h3>Product</h3>
+                    <ul>
+                        <li>User-centred design</li>
+                        <li>Feature prioritisation</li>
+                        <li>Long-term maintenance</li>
+                        <li>Cross-device experiences</li>
+                        <li>Visual design systems</li>
+                    </ul>
+                </div>
+
+                <div class="result-category">
+                    <h3>Business</h3>
+                    <ul>
+                        <li>App Store publishing</li>
+                        <li>App branding</li>
+                        <li>User retention through iterative updates</li>
+                        <li>Product lifecycle management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html" class="back-link" style="margin-top: 40px;">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+    </main>
+</body>
+</html>
