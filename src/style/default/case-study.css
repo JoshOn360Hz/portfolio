@@ -309,21 +309,34 @@ main {
 .back-link {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     color: var(--indigo);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 15px;
     margin-bottom: 32px;
-    transition: transform 0.2s ease;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, rgba(88, 86, 214, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border: 1.5px solid rgba(88, 86, 214, 0.3);
+    border-radius: 24px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(88, 86, 214, 0.15);
 }
 
 .back-link:hover {
     transform: translateX(-4px);
+    background: linear-gradient(135deg, rgba(88, 86, 214, 0.15) 0%, rgba(118, 75, 162, 0.15) 100%);
+    border-color: rgba(88, 86, 214, 0.5);
+    box-shadow: 0 4px 12px rgba(88, 86, 214, 0.25);
 }
 
 .back-link i {
-    font-size: 13px;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover i {
+    transform: translateX(-2px);
 }
 
 .read-about-section {
@@ -410,5 +423,15 @@ main {
 @media (max-width: 768px) {
     .custom-icons-grid {
         grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .back-link {
+        padding: 10px 18px;
+        font-size: 14px;
+        gap: 8px;
+    }
+    
+    .back-link i {
+        font-size: 13px;
     }
 }
