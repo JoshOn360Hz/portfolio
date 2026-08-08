@@ -225,7 +225,7 @@
       "image": "assets/apps/iOS/uplink.png",
       "imageAlt": "UpLink app icon",
       "description": "A network strategy game. Build and manage infrastructure to keep devices connected before the network goes down.",
-      "featured": true,
+      "featured": false,
       "featuredOrder": 3,
       "status": "beta",
       "statusLabel": "BETA",
@@ -246,6 +246,39 @@
         {
           "label": "GitHub",
           "url": "https://github.com/JoshOn360Hz/UpLinkApp",
+          "iconClass": "fa-brands fa-github",
+          "buttonClass": "download-button-github"
+        }
+      ]
+    },
+    {
+      "id": "motivate",
+      "name": "Motivate",
+      "category": "ios",
+      "image": "assets/apps/iOS/motivate.png",
+      "imageAlt": "Motivate app icon",
+      "description": "Motivate is an iOS app that blocks out distracting apps until your exercise goal is completed.",
+      "featured": true,
+      "featuredOrder": 3,
+      "status": "beta",
+      "statusLabel": "BETA",
+      "badges": ["HealthKit", "FamilySettings", "DeviceActivity"],
+      "links": [
+        {
+          "label": "TestFlight",
+          "url": "https://testflight.apple.com/join/Pc6G2gtd",
+          "iconClass": "fa-brands fa-apple",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "Website",
+          "url": "https://appsbyjosh.com/motivate.html",
+          "iconClass": "fa fa-globe",
+          "buttonClass": "download-button"
+        },
+        {
+          "label": "GitHub",
+          "url": "https://github.com/JoshOn360Hz/MotivateApp",
           "iconClass": "fa-brands fa-github",
           "buttonClass": "download-button-github"
         }
